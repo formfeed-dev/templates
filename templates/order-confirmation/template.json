@@ -1,0 +1,7 @@
+{
+  "name": "One template, many languages",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "Texts come from the template’s dictionary through `t()`, and the request’s `locale` picks the language and the number and date formats. The German render says “Auftragsbestätigung” and “113,50 €”, the English one “Order confirmation” and “€113.50”, from the same data.",
+  "tags": []
+}

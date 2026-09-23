@@ -1,0 +1,35 @@
+{
+  "company": {
+    "name": "Fennlor Studio Ltd",
+    "street": "1 Example Street",
+    "city": "Exampletown"
+  },
+  "customer": {
+    "name": "Olvarest Ltd"
+  },
+  "quote": {
+    "number": "Q-2026-017",
+    "date": "2026-09-10",
+    "lines": [
+      {
+        "description": "Discovery workshop",
+        "qty": 2,
+        "price": 950,
+        "total": 1900
+      },
+      {
+        "description": "Design system",
+        "qty": 1,
+        "price": 6400,
+        "total": 6400
+      },
+      {
+        "description": "Front-end build (days)",
+        "qty": 12,
+        "price": 720,
+        "total": 8640
+      }
+    ],
+    "notes": "Prices exclude VAT. Travel is billed at cost."
+  }
+}

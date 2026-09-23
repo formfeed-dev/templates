@@ -1,0 +1,29 @@
+<section class="label">
+  <header>
+    <strong>{{ shipment.service | upper }}</strong>
+    <span>{{ shipment.weight_kg | number(1) }} kg</span>
+  </header>
+
+  <p class="from">
+    {{ shipment.from.name }}, {{ shipment.from.street }}, {{ shipment.from.city }}, {{ shipment.from.country }}
+  </p>
+
+  <address class="to">
+    <strong>{{ shipment.to.name }}</strong><br>
+    {{ shipment.to.street }}<br>
+    {{ shipment.to.city }}<br>
+    {{ shipment.to.country }}
+  </address>
+
+  <img class="tracking" src="{{ barcode(shipment.tracking, { type: 'code128', height: 18 }) }}" alt="Tracking barcode">
+
+  <footer>
+    <img src="{{ qrcode('https://track.example/' ~ shipment.tracking, { size: 88 }) }}" alt="Tracking link">
+    <ul>
+      {% for item in shipment.items %}
+      <li>{{ item.qty }} × {{ item.sku }}</li>
+      {% endfor %}
+      <li>{{ shipment.items | sum('qty') }} items · {{ shipment.id }}</li>
+    </ul>
+  </footer>
+</section>

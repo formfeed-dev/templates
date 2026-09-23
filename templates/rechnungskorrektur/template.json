@@ -1,0 +1,7 @@
+{
+  "name": "German invoice correction (Rechnungskorrektur)",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "What is commonly called a “Gutschrift”: a correction that refers to the original invoice by number and date and shows the amounts as negatives. The data holds the positive values of the corrected lines; the template turns the sign with `multiply(-1)` and computes VAT on the result.",
+  "tags": []
+}

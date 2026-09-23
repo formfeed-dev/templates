@@ -1,0 +1,7 @@
+{
+  "name": "German quote (Angebot) with optional items",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "A quote in the German letter layout: optional positions are listed but stay out of the sum, the discount and VAT are computed in the template, and the validity date follows from the quote date. The footer carries the company details German law expects on business letters.",
+  "tags": []
+}

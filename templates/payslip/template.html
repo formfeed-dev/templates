@@ -1,0 +1,37 @@
+<header>
+  <div>
+    <p class="brand">{{company.name}}</p>
+    <p class="muted">{{company.street}}, {{company.city}}</p>
+  </div>
+  <div class="period">
+    <h1>Payslip</h1>
+    <p class="muted">{{date period.month "MMMM yyyy"}} · paid on {{date period.paid_on "d MMM yyyy"}}</p>
+  </div>
+</header>
+
+<section class="employee">
+  <strong>{{employee.name}}</strong>, {{employee.role}}
+  <span class="muted">· No. {{employee.number}} · Tax ID {{employee.tax_id}}</span>
+</section>
+
+<table>
+  <thead><tr><th>Earnings</th><th class="num">Amount</th></tr></thead>
+  <tbody>
+    {{#each earnings}}
+    <tr><td>{{label}}</td><td class="num">{{money amount}}</td></tr>
+    {{/each}}
+  </tbody>
+  <tfoot><tr><td>Gross pay</td><td class="num">{{money (sum earnings "amount")}}</td></tr></tfoot>
+</table>
+
+<table>
+  <thead><tr><th>Deductions</th><th class="num">Amount</th></tr></thead>
+  <tbody>
+    {{#each deductions}}
+    <tr><td>{{label}}</td><td class="num">{{money amount}}</td></tr>
+    {{/each}}
+  </tbody>
+  <tfoot><tr><td>Total deductions</td><td class="num">{{money (sum deductions "amount")}}</td></tr></tfoot>
+</table>
+
+<p class="net">Net pay <strong>{{money net}}</strong></p>

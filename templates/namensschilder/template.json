@@ -1,0 +1,7 @@
+{
+  "name": "Name badges, eight per A4 sheet",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "One request carries the whole guest list. `chunk(8)` cuts it into sheets of eight badges in a CSS grid of 90 × 67.5 mm cells, `pageBreak()` starts a new sheet between them, and `default` fills in a missing organisation or role. Ten guests give two pages.",
+  "tags": []
+}

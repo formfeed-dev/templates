@@ -1,0 +1,12 @@
+{
+  "post": {
+    "category": "Engineering",
+    "title": "Templates belong in Git: reviewing invoice layouts in pull requests",
+    "published": "2026-09-10",
+    "minutes": 6,
+    "author": {
+      "name": "Formfeed",
+      "avatar": "https://formfeed.dev/favicon.svg"
+    }
+  }
+}

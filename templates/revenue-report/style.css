@@ -1,0 +1,12 @@
+body { font-family: 'Noto Sans', sans-serif; font-size: 10pt; color: #1e293b; }
+.cover { height: 235mm; display: flex; flex-direction: column; justify-content: center; }
+.eyebrow { margin: 0; color: #4f46e5; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; }
+.cover h1 { margin: 3mm 0; font-size: 36pt; color: #0f172a; }
+h2 { margin: 0 0 6mm; font-size: 15pt; }
+.ff-chart { display: block; margin: 0 auto 10mm; }
+.figures { width: 100%; border-collapse: collapse; }
+.figures th, .figures td { padding: 2.2mm 2mm; border-bottom: 1px solid #e2e8f0; text-align: left; }
+.figures thead th { border-bottom: 1.5px solid #1e293b; font-size: 8pt; text-transform: uppercase; color: #64748b; }
+.figures tfoot th { border-top: 1.5px solid #1e293b; border-bottom: 0; }
+.figures tfoot { display: table-row-group; } /* the total once, at the end, not at the foot of every page */
+.num { text-align: right !important; }

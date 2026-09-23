@@ -1,0 +1,10 @@
+{
+  "image": {
+    "width": 1200,
+    "height": 630,
+    "deviceScaleFactor": 1,
+    "format": "png"
+  },
+  "tailwind": true,
+  "locale": "en-GB"
+}

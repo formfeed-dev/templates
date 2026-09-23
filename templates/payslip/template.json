@@ -1,0 +1,7 @@
+{
+  "name": "Confidential payslip with a password",
+  "kind": "pdf",
+  "engine": "handlebars",
+  "description": "Two post-processing steps in one request: a red CONFIDENTIAL mark on every page, then AES-256 encryption with the employee’s password, allowing printing but not copying or editing. The password never reaches the render log. The download opens with the password `formfeed`. One unit for the page plus half a unit per step.",
+  "tags": []
+}

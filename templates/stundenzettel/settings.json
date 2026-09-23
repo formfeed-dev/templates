@@ -1,0 +1,13 @@
+{
+  "paper": {
+    "format": "A4"
+  },
+  "margin": {
+    "top": "18mm",
+    "right": "18mm",
+    "bottom": "18mm",
+    "left": "18mm"
+  },
+  "locale": "de-DE",
+  "timezone": "Europe/Berlin"
+}

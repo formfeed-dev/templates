@@ -1,0 +1,43 @@
+<p class="sender">{{ company.name }} · {{ company.street }} · {{ company.city }}</p>
+<address class="recipient">
+  <strong>{{ customer.name }}</strong><br>
+  {{ customer.street }}<br>
+  {{ customer.city }}
+</address>
+<table class="facts">
+  <tr><td>Korrekturnummer</td><td>{{ correction.number }}</td></tr>
+  <tr><td>Datum</td><td>{{ correction.date | date('dd.MM.yyyy') }}</td></tr>
+  <tr><td>Kundennummer</td><td>{{ customer.number }}</td></tr>
+</table>
+
+<h1>Rechnungskorrektur {{ correction.number }}</h1>
+<p>
+  zur Rechnung <strong>{{ correction.invoice.number }}</strong> vom {{ correction.invoice.date | date('dd.MM.yyyy') }}.
+  {{ correction.reason }}
+</p>
+
+<table class="lines">
+  <thead>
+    <tr><th>Leistung</th><th class="num">Menge</th><th class="num">Preis</th><th class="num">Korrektur</th></tr>
+  </thead>
+  <tbody>
+    {% for line in correction.lines %}
+    <tr>
+      <td>{{ line.description }}</td>
+      <td class="num">{{ line.qty | number(0) }}</td>
+      <td class="num">{{ line.price | money }}</td>
+      <td class="num">{{ line.total | multiply(-1) | money }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% set net = correction.lines | sum('total') | multiply(-1) %}
+{% set vat = net * correction.vat_rate / 100 %}
+<table class="totals">
+  <tr><td>Netto</td><td class="num">{{ net | money }}</td></tr>
+  <tr><td>USt. {{ correction.vat_rate }} %</td><td class="num">{{ vat | money }}</td></tr>
+  <tr class="grand"><td>Gutschriftsbetrag</td><td class="num">{{ (net + vat) | money }}</td></tr>
+</table>
+
+<p>Den Betrag von {{ (net + vat) | multiply(-1) | money }} {{ correction.settlement }}</p>

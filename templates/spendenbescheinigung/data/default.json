@@ -1,0 +1,28 @@
+{
+  "organisation": {
+    "name": "Förderverein Musterstadt e. V.",
+    "street": "Musterstraße 1",
+    "city": "12345 Musterstadt",
+    "purpose": "der Jugendhilfe",
+    "tax_office": "Musterstadt",
+    "tax_number": "000/000/00000",
+    "notice_date": "2025-03-14",
+    "notice_period": "2021 bis 2023"
+  },
+  "donor": {
+    "name": "Erika Mustermann",
+    "street": "Beispielweg 2",
+    "city": "54321 Beispielstadt"
+  },
+  "donation": {
+    "amount": 250,
+    "date": "2026-09-10",
+    "waiver": false
+  },
+  "receipt": {
+    "place": "Musterstadt",
+    "date": "2026-09-18",
+    "signer": "Max Mustermann",
+    "signer_role": "Schatzmeister"
+  }
+}

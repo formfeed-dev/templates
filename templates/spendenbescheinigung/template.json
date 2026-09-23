@@ -1,0 +1,7 @@
+{
+  "name": "German donation receipt (Spendenbescheinigung)",
+  "kind": "pdf",
+  "engine": "liquid",
+  "description": "A receipt for a monetary donation laid out after the wording of the official German sample: the amount in figures and, through `numToWords`, in capital letters as the form asks, the exemption notice of the tax office, and the liability note. It shows the mechanics; have your tax adviser check the wording for your organisation.",
+  "tags": []
+}

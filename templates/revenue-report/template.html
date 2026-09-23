@@ -1,0 +1,42 @@
+<section class="cover">
+  <p class="eyebrow">{{ report.period }}</p>
+  <h1>{{ report.title }}</h1>
+  <p>Prepared on {{ report.date | date('PPP') }}</p>
+</section>
+
+{{ pageBreak() }}
+
+<h2>Revenue per month</h2>
+{{ chart({
+  type: 'bar',
+  data: {
+    labels: months | pluck('month'),
+    datasets: [{ label: 'Revenue', data: months | pluck('revenue'), backgroundColor: '#4f46e5' }]
+  },
+  width: 640,
+  height: 280
+}) }}
+
+<table class="figures">
+  <thead>
+    <tr><th>Month</th><th class="num">Orders</th><th class="num">Revenue</th><th class="num">Average order</th></tr>
+  </thead>
+  <tbody>
+    {% for m in months %}
+    <tr>
+      <td>{{ m.month }}</td>
+      <td class="num">{{ m.orders | number(0) }}</td>
+      <td class="num">{{ m.revenue | money }}</td>
+      <td class="num">{{ (m.revenue / m.orders) | money }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <th class="num">{{ months | sum('orders') | number(0) }}</th>
+      <th class="num">{{ months | sum('revenue') | money }}</th>
+      <th></th>
+    </tr>
+  </tfoot>
+</table>

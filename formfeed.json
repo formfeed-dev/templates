@@ -1,0 +1,9 @@
+{
+  "templatesDir": "templates",
+  "partialsDir": "partials",
+  "filesDir": "files",
+  "engine": "jinja2",
+  "ignore": [
+    "**/drafts/**"
+  ]
+}

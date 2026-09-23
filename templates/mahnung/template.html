@@ -1,0 +1,50 @@
+<p class="sender">{{company.name}} · {{company.street}} · {{company.city}}</p>
+<address class="recipient">
+  <strong>{{customer.name}}</strong><br>
+  Buchhaltung<br>
+  {{customer.street}}<br>
+  {{customer.city}}
+</address>
+<table class="facts">
+  <tr><td>Datum</td><td>{{date reminder.date "dd.MM.yyyy"}}</td></tr>
+  <tr><td>Kundennummer</td><td>{{customer.number}}</td></tr>
+</table>
+
+<h1>{{reminder.level}}. Mahnung</h1>
+<p>Sehr geehrte Damen und Herren,</p>
+{{#if reminder.final}}
+<p>trotz unserer Zahlungserinnerung sind die folgenden Rechnungen weiterhin offen. Bitte überweisen Sie den Gesamtbetrag bis zum <strong>{{date (dateAdd reminder.date reminder.days_to_pay "days") "dd.MM.yyyy"}}</strong>. Danach geben wir die Forderung ohne weitere Ankündigung an ein Inkassounternehmen ab.</p>
+{{else}}
+<p>sicher ist es Ihrer Aufmerksamkeit entgangen: Die folgenden Rechnungen sind noch offen. Bitte überweisen Sie den Gesamtbetrag bis zum <strong>{{date (dateAdd reminder.date reminder.days_to_pay "days") "dd.MM.yyyy"}}</strong>.</p>
+{{/if}}
+
+<table class="lines">
+  <thead>
+    <tr><th>Rechnung</th><th>Rechnungsdatum</th><th>Fällig seit</th><th class="num">Tage überfällig</th><th class="num">Offener Betrag</th></tr>
+  </thead>
+  <tbody>
+    {{#each invoices}}
+    <tr>
+      <td>{{number}}</td>
+      <td>{{date date "dd.MM.yyyy"}}</td>
+      <td>{{date due "dd.MM.yyyy"}}</td>
+      <td class="num">{{days_overdue}}</td>
+      <td class="num">{{money amount}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<table class="totals">
+  <tr><td>Offene Rechnungen</td><td class="num">{{money (sum invoices "amount")}}</td></tr>
+  <tr><td>Verzugszinsen</td><td class="num">{{money reminder.interest}}</td></tr>
+  <tr><td>Mahngebühr</td><td class="num">{{money reminder.fee}}</td></tr>
+  <tr class="grand"><td>Zu zahlen</td><td class="num">{{money (add (add (sum invoices "amount") reminder.interest) reminder.fee)}}</td></tr>
+</table>
+
+<figure class="pay">
+  <img src="{{epcQr name=company.name iban=company.iban bic=company.bic amount=(add (add (sum invoices "amount") reminder.interest) reminder.fee) text=reminder.reference size=110}}" alt="GiroCode">
+  <figcaption>Mit der Banking-App scannen: Betrag und Verwendungszweck <strong>{{reminder.reference}}</strong> sind eingetragen.</figcaption>
+</figure>
+
+<p class="muted">Sollten Sie inzwischen gezahlt haben, betrachten Sie dieses Schreiben bitte als gegenstandslos.</p>

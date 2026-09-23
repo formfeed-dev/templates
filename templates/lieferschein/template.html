@@ -1,0 +1,40 @@
+<p class="sender">{{ company.name }} · {{ company.street }} · {{ company.city }}</p>
+<address class="recipient">
+  <strong>{{ customer.name }}</strong><br>
+  {{ delivery.recipient | default: customer.contact }}<br>
+  {{ customer.street }}<br>
+  {{ customer.city }}
+</address>
+<table class="facts">
+  <tr><td>Lieferschein</td><td>{{ delivery.number }}</td></tr>
+  <tr><td>Lieferdatum</td><td>{{ delivery.date | date: "dd.MM.yyyy" }}</td></tr>
+  <tr><td>Bestellung</td><td>{{ delivery.order_number }}</td></tr>
+  <tr><td>Versand</td><td>{{ delivery.carrier }}, {{ delivery.packages }} Pakete</td></tr>
+</table>
+
+<h1>Lieferschein {{ delivery.number }}</h1>
+<img class="code" src="{{ delivery.number | barcode: type: 'code128', height: 12 }}" alt="Lieferscheinnummer">
+
+<table class="lines">
+  <thead>
+    <tr><th>Pos.</th><th>Artikelnr.</th><th>Bezeichnung</th><th class="num">Bestellt</th><th class="num">Geliefert</th></tr>
+  </thead>
+  <tbody>
+    {% for line in delivery.lines %}
+    <tr>
+      <td>{{ forloop.index }}</td>
+      <td>{{ line.sku }}</td>
+      <td>{{ line.description }}{% if line.delivered < line.ordered %}<br><span class="muted">Restmenge folgt</span>{% endif %}</td>
+      <td class="num">{{ line.ordered | number: 0 }} {{ line.unit }}</td>
+      <td class="num">{{ line.delivered | number: 0 }} {{ line.unit }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<p class="muted">{{ delivery.lines | sum: "delivered" | number: 0 }} von {{ delivery.lines | sum: "ordered" | number: 0 }} Einheiten geliefert.</p>
+
+<section class="receipt">
+  <p>Ware vollständig und unbeschädigt erhalten:</p>
+  <div><span></span>Datum</div>
+  <div><span></span>Unterschrift, Name in Druckbuchstaben</div>
+</section>

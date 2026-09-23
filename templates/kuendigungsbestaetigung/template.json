@@ -1,0 +1,7 @@
+{
+  "name": "German cancellation confirmation (Kündigungsbestätigung)",
+  "kind": "pdf",
+  "engine": "handlebars",
+  "description": "A plain business letter whose paragraphs depend on the data: with a refund it names the amount and the date, without one it says that nothing is open, and the data export paragraph appears only when there is a deadline. Dates are written out in German.",
+  "tags": []
+}

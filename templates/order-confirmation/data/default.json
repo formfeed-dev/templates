@@ -1,0 +1,17 @@
+{
+  "order": {
+    "number": "A-1042",
+    "customer": "Jane",
+    "date": "2026-09-10",
+    "items": [
+      {
+        "name": "Desk lamp",
+        "total": 89
+      },
+      {
+        "name": "Linen shade",
+        "total": 24.5
+      }
+    ]
+  }
+}

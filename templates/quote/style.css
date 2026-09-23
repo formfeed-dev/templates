@@ -1,0 +1,11 @@
+body { font-family: 'Inter', sans-serif; font-size: 10pt; color: #1e293b; }
+header { padding-bottom: 6mm; border-bottom: 1px solid #e2e8f0; }
+.brand { margin: 0; font-size: 14pt; font-weight: 700; color: #0f766e; }
+.muted { margin: 1mm 0 0; color: #64748b; }
+h1 { margin: 14mm 0 2mm; font-size: 22pt; }
+table { width: 100%; margin-top: 10mm; border-collapse: collapse; }
+th { padding: 2mm 1.5mm; border-bottom: 1.5px solid #1e293b; text-align: left; font-size: 8pt; text-transform: uppercase; color: #64748b; }
+td { padding: 2.5mm 1.5mm; border-bottom: 1px solid #e2e8f0; }
+tfoot td { border-top: 1.5px solid #1e293b; border-bottom: 0; font-weight: 700; font-size: 12pt; }
+.num { text-align: right !important; white-space: nowrap; }
+.notes { margin-top: 10mm; font-size: 8.5pt; color: #64748b; }

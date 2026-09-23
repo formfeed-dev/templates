@@ -1,0 +1,20 @@
+{
+  "event": {
+    "series": "Fennlor Konferenz 2026",
+    "title": "Dokumente, die sich selbst schreiben",
+    "starts": "2026-11-12T09:30:00+01:00",
+    "doors": "2026-11-12T08:30:00+01:00",
+    "venue": "Stadthalle Musterstadt",
+    "address": "Musterstraße 1, 12345 Musterstadt"
+  },
+  "holder": {
+    "name": "Erika Mustermann"
+  },
+  "ticket": {
+    "id": "FK26-000193",
+    "category": "Konferenz + Workshop",
+    "seat": "Freie Platzwahl",
+    "price": 349,
+    "check_in_url": "https://konferenz.example/checkin/FK26-000193"
+  }
+}

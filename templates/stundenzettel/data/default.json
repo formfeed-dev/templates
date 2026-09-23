@@ -1,0 +1,71 @@
+{
+  "company": {
+    "name": "Fennlor Studio GmbH",
+    "street": "Musterstraße 1",
+    "city": "12345 Musterstadt",
+    "phone": "+49 000 0000000",
+    "email": "hallo@fennlor.example",
+    "iban": "DE36000000000000000000",
+    "bic": "XXXXDEXXXXX",
+    "vat_id": "DE000000000",
+    "register": "Amtsgericht Musterstadt, HRB 00000",
+    "director": "Erika Mustermann"
+  },
+  "employee": {
+    "name": "Max Mustermann",
+    "number": "E-0417"
+  },
+  "sheet": {
+    "week": 38,
+    "from": "2026-09-14",
+    "until": "2026-09-18",
+    "target_hours": 40
+  },
+  "entries": [
+    {
+      "day": "2026-09-14",
+      "project": "Kundenportal",
+      "task": "Rendering-Pipeline",
+      "from": "08:30",
+      "to": "17:30",
+      "break_minutes": 45,
+      "hours": 8.25
+    },
+    {
+      "day": "2026-09-15",
+      "project": "Kundenportal",
+      "task": "Review und Tests",
+      "from": "08:30",
+      "to": "17:00",
+      "break_minutes": 30,
+      "hours": 8
+    },
+    {
+      "day": "2026-09-16",
+      "project": "Intern",
+      "task": "Teamtag",
+      "from": "09:00",
+      "to": "16:30",
+      "break_minutes": 60,
+      "hours": 6.5
+    },
+    {
+      "day": "2026-09-17",
+      "project": "Kundenportal",
+      "task": "Release",
+      "from": "08:00",
+      "to": "18:30",
+      "break_minutes": 45,
+      "hours": 9.75
+    },
+    {
+      "day": "2026-09-18",
+      "project": "Wartung",
+      "task": "Updates und Monitoring",
+      "from": "08:30",
+      "to": "17:00",
+      "break_minutes": 30,
+      "hours": 8
+    }
+  ]
+}

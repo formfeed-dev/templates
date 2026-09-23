@@ -1,0 +1,20 @@
+<main class="ticket">
+  <section class="main">
+    <p class="eyebrow">{{ event.series | upper }}</p>
+    <h1>{{ event.title }}</h1>
+    <p class="when">{{ event.starts | date('EEEE, d. MMMM yyyy') }} · Einlass {{ event.doors | date('HH:mm') }} Uhr · Beginn {{ event.starts | date('HH:mm') }} Uhr</p>
+    <p class="where">{{ event.venue }}, {{ event.address }}</p>
+    <dl>
+      <div><dt>Name</dt><dd>{{ holder.name }}</dd></div>
+      <div><dt>Kategorie</dt><dd>{{ ticket.category }}</dd></div>
+      <div><dt>Platz</dt><dd>{{ ticket.seat }}</dd></div>
+      <div><dt>Preis</dt><dd>{{ ticket.price | money }}</dd></div>
+    </dl>
+    <img class="strip" src="{{ barcode(ticket.id, { type: 'pdf417', height: 8 }) }}" alt="Ticketnummer">
+  </section>
+  <aside class="stub">
+    <img src="{{ qrcode(ticket.check_in_url, { size: 120 }) }}" alt="Check-in-Code">
+    <p>{{ ticket.id }}</p>
+    <p class="muted">Am Einlass vorzeigen</p>
+  </aside>
+</main>

@@ -1,0 +1,7 @@
+{
+  "name": "Open Graph image with Tailwind",
+  "kind": "image",
+  "engine": "liquid",
+  "description": "A 1200×630 social image in Liquid with Tailwind classes, compiled at render time. Liquid passes options as keyword arguments (`| image: width: 72`), and identical requests are served from the dedup cache at zero units.",
+  "tags": []
+}

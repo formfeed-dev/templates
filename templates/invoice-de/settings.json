@@ -1,0 +1,17 @@
+{
+  "paper": {
+    "format": "A4"
+  },
+  "margin": {
+    "top": "20mm",
+    "right": "18mm",
+    "bottom": "22mm",
+    "left": "18mm"
+  },
+  "footer": {
+    "height": "12mm"
+  },
+  "locale": "de-DE",
+  "timezone": "Europe/Berlin",
+  "currency": "EUR"
+}

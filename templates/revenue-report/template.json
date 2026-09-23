@@ -1,0 +1,7 @@
+{
+  "name": "Report with a chart",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "A cover page, a page break and a Chart.js bar chart built from the data inside the template, with `pluck` pulling the labels and values out of the rows. Charts render without animation, so the PDF matches the preview. Long reports go async and report back through a webhook.",
+  "tags": []
+}

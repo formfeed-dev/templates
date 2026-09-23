@@ -1,0 +1,46 @@
+<p class="sender">{{ company.name }} · {{ company.street }} · {{ company.city }}</p>
+<address class="recipient">
+  <strong>{{ customer.name }}</strong><br>
+  {{ customer.contact }}<br>
+  {{ customer.street }}<br>
+  {{ customer.city }}
+</address>
+<table class="facts">
+  <tr><td>Angebot</td><td>{{ quote.number }}</td></tr>
+  <tr><td>Datum</td><td>{{ quote.date | date('dd.MM.yyyy') }}</td></tr>
+  <tr><td>Gültig bis</td><td>{{ quote.date | dateAdd(quote.valid_days, 'days') | date('dd.MM.yyyy') }}</td></tr>
+  <tr><td>Kundennummer</td><td>{{ customer.number }}</td></tr>
+</table>
+
+<h1>Angebot {{ quote.number }}</h1>
+<p>Guten Tag {{ customer.contact }},<br>vielen Dank für Ihre Anfrage. Gern bieten wir Ihnen an:</p>
+
+<table class="lines">
+  <thead>
+    <tr><th>Pos.</th><th>Leistung</th><th class="num">Menge</th><th class="num">Einzelpreis</th><th class="num">Gesamt</th></tr>
+  </thead>
+  <tbody>
+    {% for line in quote.lines %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ line.description }}{% if line.optional %} <span class="muted">(optional, nicht in der Summe)</span>{% endif %}</td>
+      <td class="num">{{ line.qty | number(0) }} {{ line.unit }}</td>
+      <td class="num">{{ line.price | money }}</td>
+      <td class="num">{{ line.total | money }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% set net = quote.lines | where('optional', false) | sum('total') %}
+{% set discount = net * quote.discount_percent / 100 %}
+{% set vat = (net - discount) * quote.vat_rate / 100 %}
+<table class="totals">
+  <tr><td>Zwischensumme</td><td class="num">{{ net | money }}</td></tr>
+  <tr><td>Rabatt {{ quote.discount_percent }} %</td><td class="num">−{{ discount | money }}</td></tr>
+  <tr><td>USt. {{ quote.vat_rate }} %</td><td class="num">{{ vat | money }}</td></tr>
+  <tr class="grand"><td>Angebotssumme</td><td class="num">{{ (net - discount + vat) | money }}</td></tr>
+</table>
+
+<p>{{ quote.terms }}</p>
+<p>Mit freundlichen Grüßen<br>{{ company.director }}</p>

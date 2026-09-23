@@ -1,0 +1,6 @@
+body { font-family: 'Noto Sans', sans-serif; font-size: 10pt; color: #1e293b; }
+h1 { margin: 0 0 3mm; font-size: 16pt; color: #312e81; }
+table { width: 100%; margin: 7mm 0; border-collapse: collapse; }
+td { padding: 2mm 0; border-bottom: 1px solid #e2e8f0; }
+.num { text-align: right; }
+.grand td { border-top: 1.5px solid #1e293b; border-bottom: 0; font-weight: 700; }

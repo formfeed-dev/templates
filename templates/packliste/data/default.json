@@ -1,0 +1,63 @@
+{
+  "company": {
+    "name": "Fennlor Studio GmbH",
+    "street": "Musterstraße 1",
+    "city": "12345 Musterstadt",
+    "phone": "+49 000 0000000",
+    "email": "hallo@fennlor.example",
+    "iban": "DE36000000000000000000",
+    "bic": "XXXXDEXXXXX",
+    "vat_id": "DE000000000",
+    "register": "Amtsgericht Musterstadt, HRB 00000",
+    "director": "Erika Mustermann"
+  },
+  "customer": {
+    "name": "Olvarest GmbH",
+    "contact": "Max Mustermann",
+    "street": "Beispielweg 2",
+    "city": "54321 Beispielstadt",
+    "number": "K-10482"
+  },
+  "shipment": {
+    "number": "PL-2026-0117",
+    "date": "2026-09-16",
+    "order_number": "B-4471",
+    "items": [
+      {
+        "package": "1 von 3",
+        "sku": "FF-1001",
+        "description": "Tischleuchte, schwarz",
+        "qty": 6,
+        "weight_kg": 7.2
+      },
+      {
+        "package": "1 von 3",
+        "sku": "FF-3300",
+        "description": "Leuchtmittel E27, warmweiß",
+        "qty": 12,
+        "weight_kg": 0.9
+      },
+      {
+        "package": "2 von 3",
+        "sku": "FF-1001",
+        "description": "Tischleuchte, schwarz",
+        "qty": 6,
+        "weight_kg": 7.2
+      },
+      {
+        "package": "2 von 3",
+        "sku": "FF-3300",
+        "description": "Leuchtmittel E27, warmweiß",
+        "qty": 12,
+        "weight_kg": 0.9
+      },
+      {
+        "package": "3 von 3",
+        "sku": "FF-2040",
+        "description": "Leinenschirm, natur",
+        "qty": 8,
+        "weight_kg": 3.4
+      }
+    ]
+  }
+}

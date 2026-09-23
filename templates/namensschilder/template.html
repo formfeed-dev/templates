@@ -1,0 +1,14 @@
+{% for sheet in attendees | chunk(8) %}
+<section class="sheet">
+  {% for person in sheet %}
+  <article class="badge">
+    <p class="event">{{ event.name | upper }}</p>
+    <h1>{{ person.first_name }}</h1>
+    <p class="last">{{ person.last_name }}</p>
+    <p class="org">{{ person.organisation | default('Gast') }}</p>
+    <p class="role role-{{ person.role | default('teilnehmer') }}">{{ person.role | default('teilnehmer') | upper }}</p>
+  </article>
+  {% endfor %}
+</section>
+{% if not loop.last %}{{ pageBreak() }}{% endif %}
+{% endfor %}

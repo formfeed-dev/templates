@@ -1,0 +1,12 @@
+body { font-family: 'Source Serif 4', serif; font-size: 11pt; line-height: 1.6; color: #111827; }
+header { padding-bottom: 5mm; border-bottom: 1px solid #9ca3af; }
+.company { margin: 0; font-size: 12pt; font-weight: 600; letter-spacing: 0.12em; }
+.muted { margin: 1mm 0 0; font-size: 9pt; color: #6b7280; }
+h1 { margin: 16mm 0 8mm; font-size: 18pt; font-weight: 600; text-align: center; }
+p { margin: 0 0 4mm; text-align: justify; hyphens: auto; }
+section ul { margin: 0 0 4mm; padding-left: 6mm; }
+footer { margin-top: 12mm; break-inside: avoid; }
+.signatures { display: flex; gap: 14mm; margin-top: 16mm; }
+.signatures div { flex: 1; font-size: 10pt; }
+.signatures span { display: block; margin-bottom: 2mm; border-top: 1px solid #111827; }
+small { color: #6b7280; }

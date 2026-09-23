@@ -1,0 +1,7 @@
+{
+  "name": "German certificate of attendance (Teilnahmebescheinigung)",
+  "kind": "pdf",
+  "engine": "handlebars",
+  "description": "A certificate that lists what was taught: the course modules with their teaching units, the total as a number and spelled out in German by `numToWords`, and a QR code to verify the certificate number. Full-bleed A4 with zero margins, rendered for a whole course as one batch.",
+  "tags": []
+}

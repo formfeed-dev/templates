@@ -1,0 +1,14 @@
+{
+  "shop": {
+    "name": "Fennlor Studio",
+    "url": "shop.fennlor.example"
+  },
+  "voucher": {
+    "code": "FF-7K2M-9QXA",
+    "amount": 50,
+    "recipient": "Erika",
+    "message": "Alles Gute zum Geburtstag!",
+    "issued": "2026-09-18",
+    "redeem_url": "https://shop.fennlor.example/einloesen/FF-7K2M-9QXA"
+  }
+}

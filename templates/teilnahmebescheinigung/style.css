@@ -1,0 +1,22 @@
+body { margin: 0; font-family: 'Inter', sans-serif; color: #0f172a; }
+.sheet {
+  height: 297mm;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 32mm 26mm 24mm;
+  border-top: 12mm solid #312e81;
+}
+.eyebrow { margin: 0; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #4f46e5; }
+h1 { margin: 10mm 0 4mm; font-size: 32pt; }
+.lead { margin: 0 0 12mm; font-size: 13pt; line-height: 1.55; color: #334155; }
+table { width: 100%; border-collapse: collapse; font-size: 10.5pt; }
+th { padding: 2mm 0; border-bottom: 1.5px solid #0f172a; text-align: left; font-size: 8pt; letter-spacing: 0.05em; text-transform: uppercase; color: #64748b; }
+td { padding: 2.6mm 0; border-bottom: 1px solid #e2e8f0; }
+tfoot td { border-top: 1.5px solid #0f172a; border-bottom: 0; font-weight: 600; }
+.num { text-align: right !important; }
+footer { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; }
+.signature { width: 72mm; font-size: 10pt; }
+.signature span { display: block; margin-bottom: 2mm; border-top: 1px solid #0f172a; }
+small, figcaption { font-size: 8pt; color: #64748b; }
+figure { margin: 0; display: flex; align-items: flex-end; gap: 3mm; text-align: right; flex-direction: row-reverse; }

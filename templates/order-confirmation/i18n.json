@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title": "Order confirmation {number}",
+    "thanks": "Thank you for your order, {name}.",
+    "total": "Total",
+    "delivery": "Expected delivery"
+  },
+  "de": {
+    "title": "Auftragsbestätigung {number}",
+    "thanks": "Vielen Dank für Ihre Bestellung, {name}.",
+    "total": "Gesamt",
+    "delivery": "Voraussichtliche Lieferung"
+  }
+}

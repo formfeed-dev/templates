@@ -1,0 +1,20 @@
+.certificate {
+  height: 210mm;
+  padding: 22mm 28mm;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 6mm solid #312e81;
+  outline: 1px solid #a5b4fc;
+  outline-offset: -10mm;
+  background: linear-gradient(135deg, #ffffff 60%, #eef2ff);
+  font-family: 'Inter', sans-serif;
+  color: #0f172a;
+}
+.eyebrow { margin: 0; letter-spacing: 0.25em; text-transform: uppercase; color: #4f46e5; font-weight: 600; }
+h1 { margin: 12mm 0 4mm; font-family: 'Playfair Display', serif; font-size: 48pt; }
+.lead { max-width: 190mm; font-size: 16pt; line-height: 1.5; color: #334155; }
+footer { margin-top: auto; display: flex; justify-content: space-between; align-items: end; }
+.signature { font-size: 11pt; color: #334155; }
+.signature .line { display: block; width: 70mm; border-top: 1px solid #0f172a; margin-bottom: 2mm; }
+.verify { margin: 0; text-align: center; font-size: 8pt; color: #64748b; }

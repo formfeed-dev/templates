@@ -1,0 +1,42 @@
+{
+  "provider": {
+    "name": "Fennlor Akademie",
+    "city": "Musterstadt"
+  },
+  "participant": {
+    "name": "Max Mustermann"
+  },
+  "course": {
+    "title": "Dokumentenautomatisierung mit HTML und CSS",
+    "from": "2026-09-07",
+    "until": "2026-09-11",
+    "instructor": "Erika Mustermann",
+    "modules": [
+      {
+        "title": "Print-CSS: Seitenformate, Ränder, Umbrüche",
+        "units": 8
+      },
+      {
+        "title": "Vorlagensprachen: Jinja2, Liquid, Handlebars",
+        "units": 8
+      },
+      {
+        "title": "Rechnungen, GiroCode und E-Rechnung",
+        "units": 12
+      },
+      {
+        "title": "Tests, Versionen und Release Channels",
+        "units": 6
+      },
+      {
+        "title": "Praxisprojekt mit Abschlusspräsentation",
+        "units": 6
+      }
+    ]
+  },
+  "certificate": {
+    "id": "TB-2026-0193",
+    "issued": "2026-09-11",
+    "verify_url": "https://akademie.example/pruefen/TB-2026-0193"
+  }
+}

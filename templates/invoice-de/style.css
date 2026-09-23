@@ -1,0 +1,29 @@
+body { font-family: 'Inter', sans-serif; font-size: 9.5pt; color: #1e293b; }
+.sender {
+  display: inline-block;
+  margin: 10mm 0 3mm;
+  padding-bottom: 1mm;
+  border-bottom: 1px solid #cbd5e1;
+  font-size: 7pt;
+  color: #64748b;
+}
+.recipient { font-style: normal; line-height: 1.5; }
+h1 { margin: 18mm 0 1mm; font-size: 18pt; color: #312e81; }
+.meta { margin: 0 0 8mm; color: #475569; }
+table { width: 100%; border-collapse: collapse; }
+.lines th {
+  padding: 2mm 1.5mm;
+  border-bottom: 1.5px solid #1e293b;
+  text-align: left;
+  font-size: 7.5pt;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+.lines td { padding: 2.5mm 1.5mm; border-bottom: 1px solid #e2e8f0; }
+.num { text-align: right !important; white-space: nowrap; }
+.totals { width: 72mm; margin: 5mm 0 0 auto; }
+.totals td { padding: 1.3mm 1.5mm; }
+.totals .grand td { border-top: 1.5px solid #1e293b; font-weight: 700; font-size: 11pt; }
+.pay { display: flex; align-items: center; gap: 4mm; margin: 14mm 0 0; }
+.pay figcaption { max-width: 45mm; font-size: 8pt; color: #475569; }

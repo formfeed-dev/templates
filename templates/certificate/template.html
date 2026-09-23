@@ -1,0 +1,19 @@
+<main class="certificate">
+  <p class="eyebrow">Certificate of completion</p>
+  <h1>{{name}}</h1>
+  <p class="lead">
+    completed <strong>{{course}}</strong> ({{hours}} hours)
+    on {{date completed_on "d MMMM yyyy"}}.
+  </p>
+
+  <footer>
+    <div class="signature">
+      <span class="line"></span>
+      {{instructor}}, instructor
+    </div>
+    <figure class="verify">
+      <img src="{{qrcode verify_url size=96}}" alt="Verification code">
+      <figcaption>{{upper id}}</figcaption>
+    </figure>
+  </footer>
+</main>

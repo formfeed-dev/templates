@@ -1,0 +1,34 @@
+{
+  "company": {
+    "name": "Fennlor Studio GmbH",
+    "street": "Musterstraße 1",
+    "city": "12345 Musterstadt",
+    "iban": "DE36000000000000000000",
+    "bic": "XXXXDEXXXXX",
+    "vat_id": "DE000000000"
+  },
+  "customer": {
+    "name": "Olvarest GmbH",
+    "street": "Beispielweg 2",
+    "city": "54321 Beispielstadt"
+  },
+  "invoice": {
+    "number": "2026-0042",
+    "date": "2026-09-10",
+    "vat_rate": 19,
+    "lines": [
+      {
+        "description": "Consulting",
+        "qty": 8,
+        "price": 120,
+        "total": 960
+      },
+      {
+        "description": "Implementation",
+        "qty": 20,
+        "price": 110,
+        "total": 2200
+      }
+    ]
+  }
+}

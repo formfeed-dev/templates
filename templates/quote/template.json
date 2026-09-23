@@ -1,0 +1,7 @@
+{
+  "name": "Quote marked as a draft",
+  "kind": "pdf",
+  "engine": "liquid",
+  "description": "The template knows nothing about the mark: `post.watermark` stamps DRAFT across every page after the render, so the reviewed draft and the final quote come from the same template and data. The text is sized to the page diagonal and runs from bottom left to top right. Half a unit on top of the render; `/pdf/watermark` marks a PDF you rendered earlier.",
+  "tags": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Shipping label, 100×150 mm",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "A custom paper size for thermal printers, a Code 128 tracking barcode, a QR code built from a URL and the tracking number, and the package contents summed in the template. `barcode` also does EAN-13, ITF-14, DataMatrix and PDF417.",
+  "tags": []
+}

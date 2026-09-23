@@ -1,0 +1,7 @@
+{
+  "name": "German reference letter (Arbeitszeugnis) from Markdown",
+  "kind": "pdf",
+  "engine": "liquid",
+  "description": "A text document rather than a table: the paragraphs arrive as Markdown, `markdown` turns them into HTML with lists and emphasis, and the template sets a serif face, justified text with hyphenation and a signature block for two signers that stays together on one page.",
+  "tags": []
+}

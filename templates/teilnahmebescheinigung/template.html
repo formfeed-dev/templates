@@ -1,0 +1,28 @@
+<main class="sheet">
+  <p class="eyebrow">Teilnahmebescheinigung</p>
+  <h1>{{participant.name}}</h1>
+  <p class="lead">
+    hat vom {{date course.from "d. MMMM"}} bis {{date course.until "d. MMMM yyyy"}} an der Weiterbildung
+    <strong>{{course.title}}</strong> teilgenommen.
+  </p>
+
+  <table>
+    <thead><tr><th>Inhalte</th><th class="num">Unterrichtseinheiten</th></tr></thead>
+    <tbody>
+      {{#each course.modules}}
+      <tr><td>{{title}}</td><td class="num">{{number units 0}}</td></tr>
+      {{/each}}
+    </tbody>
+    <tfoot>
+      <tr><td>Gesamt ({{numToWords (sum course.modules "units") "de"}} Unterrichtseinheiten zu je 45 Minuten)</td><td class="num">{{number (sum course.modules "units") 0}}</td></tr>
+    </tfoot>
+  </table>
+
+  <footer>
+    <div class="signature"><span></span>{{course.instructor}}<br><small>Kursleitung, {{provider.name}}</small></div>
+    <figure>
+      <img src="{{qrcode certificate.verify_url size=84}}" alt="Prüfcode">
+      <figcaption>Nr. {{certificate.id}}<br>{{provider.city}}, {{date certificate.issued "d. MMMM yyyy"}}</figcaption>
+    </figure>
+  </footer>
+</main>

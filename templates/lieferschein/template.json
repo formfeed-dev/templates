@@ -1,0 +1,7 @@
+{
+  "name": "German delivery note (Lieferschein)",
+  "kind": "pdf",
+  "engine": "liquid",
+  "description": "A delivery note without prices: ordered against delivered quantities, a note on lines with a remainder to follow, the number as a Code 128 barcode for goods receipt, and a signature block that never splits across pages. Written in Liquid.",
+  "tags": []
+}

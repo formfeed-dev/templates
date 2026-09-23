@@ -1,0 +1,13 @@
+{
+  "paper": {
+    "width": "100mm",
+    "height": "150mm"
+  },
+  "margin": {
+    "top": "4mm",
+    "right": "4mm",
+    "bottom": "4mm",
+    "left": "4mm"
+  },
+  "locale": "en-GB"
+}

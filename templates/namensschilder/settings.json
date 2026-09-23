@@ -1,0 +1,12 @@
+{
+  "paper": {
+    "format": "A4"
+  },
+  "margin": {
+    "top": "13.5mm",
+    "right": "15mm",
+    "bottom": "13.5mm",
+    "left": "15mm"
+  },
+  "locale": "de-DE"
+}

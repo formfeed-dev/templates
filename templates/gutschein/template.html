@@ -1,0 +1,18 @@
+<main class="flex h-[99mm] w-[210mm] bg-gradient-to-br from-indigo-950 via-indigo-800 to-sky-600 text-white">
+  <section class="flex flex-1 flex-col justify-between p-[11mm]">
+    <p class="text-[8pt] font-semibold uppercase tracking-[0.25em] text-sky-200">Gutschein · {{ shop.name }}</p>
+    <div>
+      <p class="text-[40pt] font-bold leading-none">{{ voucher.amount | money }}</p>
+      <p class="mt-[3mm] text-[11pt] text-sky-100">für {{ voucher.recipient | default: "Sie" }}</p>
+      {% if voucher.message %}<p class="mt-[2mm] max-w-[110mm] text-[9.5pt] italic text-sky-100">„{{ voucher.message }}“</p>{% endif %}
+    </div>
+    <p class="text-[8pt] text-sky-200">
+      Ausgestellt am {{ voucher.issued | date: "dd.MM.yyyy" }} · einlösbar bis {{ voucher.issued | dateAdd: 3, "years" | date: "dd.MM.yyyy" }} · {{ shop.url }}
+    </p>
+  </section>
+  <aside class="flex w-[58mm] flex-col items-center justify-center gap-[3mm] bg-white text-slate-900">
+    <img class="h-[34mm] w-[34mm]" src="{{ voucher.redeem_url | qrcode: size: 120 }}" alt="Einlöse-Code">
+    <p class="font-mono text-[11pt] font-semibold tracking-widest">{{ voucher.code }}</p>
+    <p class="text-[7.5pt] text-slate-500">Code im Warenkorb eingeben</p>
+  </aside>
+</main>

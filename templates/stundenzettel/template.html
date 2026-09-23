@@ -1,0 +1,44 @@
+<header>
+  <div>
+    <h1>Stundenzettel</h1>
+    <p class="muted">Kalenderwoche {{sheet.week}} · {{date sheet.from "dd.MM."}} bis {{date sheet.until "dd.MM.yyyy"}}</p>
+  </div>
+  <p class="who"><strong>{{employee.name}}</strong><br>Personalnr. {{employee.number}}<br>{{company.name}}</p>
+</header>
+
+<table class="lines">
+  <thead>
+    <tr><th>Tag</th><th>Projekt</th><th>Tätigkeit</th><th class="num">Von</th><th class="num">Bis</th><th class="num">Pause</th><th class="num">Stunden</th></tr>
+  </thead>
+  <tbody>
+    {{#each entries}}
+    <tr>
+      <td>{{date day "EEE, dd.MM."}}</td>
+      <td>{{project}}</td>
+      <td>{{task}}</td>
+      <td class="num">{{from}}</td>
+      <td class="num">{{to}}</td>
+      <td class="num">{{break_minutes}} min</td>
+      <td class="num">{{number hours 2}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<table class="totals">
+  <tr><td>Gearbeitet</td><td class="num">{{number (sum entries "hours") 2}} h</td></tr>
+  <tr><td>Soll</td><td class="num">{{number sheet.target_hours 2}} h</td></tr>
+  <tr class="grand"><td>Saldo</td><td class="num">{{number (subtract (sum entries "hours") sheet.target_hours) 2}} h</td></tr>
+</table>
+
+<h2>Nach Projekt</h2>
+<ul class="projects">
+  {{#each (groupBy entries "project")}}
+  <li><span>{{key}}</span><strong>{{number (sum items "hours") 2}} h</strong></li>
+  {{/each}}
+</ul>
+
+<footer>
+  <div><span></span>Datum, Unterschrift Mitarbeiter/in</div>
+  <div><span></span>Datum, Unterschrift Vorgesetzte/r</div>
+</footer>

@@ -1,0 +1,7 @@
+{
+  "name": "Gift voucher with Tailwind, as PDF and PNG",
+  "kind": "pdf",
+  "engine": "liquid",
+  "description": "A voucher in the DIN long format, styled with Tailwind classes that are compiled at render time, arbitrary values such as `h-[99mm]` included. The expiry date is three years after the issue date through `dateAdd`, the message appears only when there is one, and the same template renders as a PNG for the mail.",
+  "tags": []
+}

@@ -1,0 +1,46 @@
+{
+  "company": {
+    "name": "Fennlor Studio GmbH",
+    "street": "Musterstraße 1",
+    "city": "12345 Musterstadt",
+    "phone": "+49 000 0000000",
+    "email": "hallo@fennlor.example",
+    "iban": "DE36000000000000000000",
+    "bic": "XXXXDEXXXXX",
+    "vat_id": "DE000000000",
+    "register": "Amtsgericht Musterstadt, HRB 00000",
+    "director": "Erika Mustermann"
+  },
+  "customer": {
+    "name": "Olvarest GmbH",
+    "contact": "Max Mustermann",
+    "street": "Beispielweg 2",
+    "city": "54321 Beispielstadt",
+    "number": "K-10482"
+  },
+  "reminder": {
+    "level": 2,
+    "final": true,
+    "date": "2026-10-20",
+    "days_to_pay": 7,
+    "interest": 18.64,
+    "fee": 5,
+    "reference": "K-10482 Mahnung 2"
+  },
+  "invoices": [
+    {
+      "number": "2026-0042",
+      "date": "2026-09-10",
+      "due": "2026-09-24",
+      "days_overdue": 26,
+      "amount": 3760.4
+    },
+    {
+      "number": "2026-0047",
+      "date": "2026-09-17",
+      "due": "2026-10-01",
+      "days_overdue": 19,
+      "amount": 892.5
+    }
+  ]
+}

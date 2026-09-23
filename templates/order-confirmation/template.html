@@ -1,0 +1,14 @@
+<h1>{{ t('title', { number: order.number }) }}</h1>
+<p>{{ t('thanks', { name: order.customer }) }}</p>
+
+<table>
+  {% for item in order.items %}
+  <tr><td>{{ item.name }}</td><td class="num">{{ item.total | money }}</td></tr>
+  {% endfor %}
+  <tr class="grand">
+    <td>{{ t('total') }}</td>
+    <td class="num">{{ order.items | sum('total') | money }}</td>
+  </tr>
+</table>
+
+<p>{{ t('delivery') }}: {{ order.date | dateAdd(3, 'days') | date('PPPP') }}</p>

@@ -1,0 +1,7 @@
+{
+  "name": "German timesheet (Stundenzettel) with balance and projects",
+  "kind": "pdf",
+  "engine": "handlebars",
+  "description": "A weekly timesheet in Handlebars: weekdays formatted in German, worked hours summed and set against the target with `subtract`, and the same entries grouped by project for the summary. Two signature lines stay together at the foot of the page.",
+  "tags": []
+}

@@ -1,0 +1,25 @@
+<header>
+  <p class="company">{{ company.name | upper }}</p>
+  <p class="muted">{{ company.street }} · {{ company.city }}</p>
+</header>
+
+<h1>{{ reference.kind }}</h1>
+
+<p>
+  {{ employee.salutation }} {{ employee.name }}, geboren am {{ employee.born | date: "d. MMMM yyyy" }},
+  war vom {{ employee.from | date: "d. MMMM yyyy" }} bis zum {{ employee.until | date: "d. MMMM yyyy" }}
+  als {{ employee.role }} in unserem Unternehmen tätig.
+</p>
+
+{% for section in reference.sections %}
+<section>{{ section | markdown }}</section>
+{% endfor %}
+
+<footer>
+  <p>{{ reference.place }}, {{ employee.until | date: "d. MMMM yyyy" }}</p>
+  <div class="signatures">
+    {% for signer in reference.signers %}
+    <div><span></span>{{ signer.name }}<br><small>{{ signer.role }}</small></div>
+    {% endfor %}
+  </div>
+</footer>

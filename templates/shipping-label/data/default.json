@@ -1,0 +1,30 @@
+{
+  "shipment": {
+    "id": "SHP-2026-118204",
+    "service": "Express",
+    "tracking": "00000000000000000000",
+    "weight_kg": 2.4,
+    "from": {
+      "name": "Fennlor Studio GmbH",
+      "street": "Musterstraße 1",
+      "city": "12345 Musterstadt",
+      "country": "DE"
+    },
+    "to": {
+      "name": "Erika Mustermann",
+      "street": "Beispielweg 2",
+      "city": "54321 Beispielstadt",
+      "country": "Germany"
+    },
+    "items": [
+      {
+        "sku": "FF-1001",
+        "qty": 2
+      },
+      {
+        "sku": "FF-2040",
+        "qty": 1
+      }
+    ]
+  }
+}

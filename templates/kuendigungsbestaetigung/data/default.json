@@ -1,0 +1,33 @@
+{
+  "company": {
+    "name": "Fennlor Studio GmbH",
+    "street": "Musterstraße 1",
+    "city": "12345 Musterstadt",
+    "phone": "+49 000 0000000",
+    "email": "hallo@fennlor.example",
+    "iban": "DE36000000000000000000",
+    "bic": "XXXXDEXXXXX",
+    "vat_id": "DE000000000",
+    "register": "Amtsgericht Musterstadt, HRB 00000",
+    "director": "Erika Mustermann"
+  },
+  "customer": {
+    "name": "Olvarest GmbH",
+    "contact": "Max Mustermann",
+    "street": "Beispielweg 2",
+    "city": "54321 Beispielstadt",
+    "number": "K-10482"
+  },
+  "letter": {
+    "date": "2026-09-21"
+  },
+  "contract": {
+    "name": "Wartungsvertrag Kundenportal",
+    "number": "V-2024-0088",
+    "received": "2026-09-18",
+    "ends": "2026-12-31",
+    "refund": 480,
+    "refund_by": "2027-01-15",
+    "export_until": "2027-01-31"
+  }
+}

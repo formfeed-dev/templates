@@ -1,0 +1,34 @@
+<p class="sender">{{ company.name }} · {{ company.street }} · {{ company.city }}</p>
+<address class="recipient">
+  <strong>{{ customer.name }}</strong><br>
+  {{ customer.street }}<br>
+  {{ customer.city }}
+</address>
+<table class="facts">
+  <tr><td>Packliste</td><td>{{ shipment.number }}</td></tr>
+  <tr><td>Datum</td><td>{{ shipment.date | date('dd.MM.yyyy') }}</td></tr>
+  <tr><td>Bestellung</td><td>{{ shipment.order_number }}</td></tr>
+</table>
+
+<h1>Packliste {{ shipment.number }}</h1>
+{% set packages = shipment.items | groupBy('package') %}
+<p>{{ packages | length }} Packstücke, {{ shipment.items | sum('qty') | number(0) }} Artikel, {{ shipment.items | sum('weight_kg') | number(1) }} kg gesamt.</p>
+
+{% for package in packages %}
+<section class="package">
+  <h2>Packstück {{ package.key }} <span class="muted">· {{ package.items | sum('weight_kg') | number(1) }} kg</span></h2>
+  <table class="lines">
+    <thead><tr><th>Artikelnr.</th><th>Bezeichnung</th><th class="num">Menge</th><th class="num">Gewicht</th></tr></thead>
+    <tbody>
+      {% for item in package.items %}
+      <tr>
+        <td>{{ item.sku }}</td>
+        <td>{{ item.description }}</td>
+        <td class="num">{{ item.qty | number(0) }}</td>
+        <td class="num">{{ item.weight_kg | number(1) }} kg</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endfor %}

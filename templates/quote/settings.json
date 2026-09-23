@@ -1,0 +1,13 @@
+{
+  "paper": {
+    "format": "A4"
+  },
+  "margin": {
+    "top": "22mm",
+    "right": "20mm",
+    "bottom": "22mm",
+    "left": "20mm"
+  },
+  "locale": "en-GB",
+  "currency": "GBP"
+}

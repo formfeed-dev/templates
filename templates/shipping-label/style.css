@@ -1,0 +1,22 @@
+body { font-family: 'Noto Sans', sans-serif; font-size: 9pt; color: #000; }
+.label {
+  height: 141mm;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid #000;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2mm 3mm;
+  background: #000;
+  color: #fff;
+  font-size: 15pt;
+}
+.from { margin: 0; padding: 2mm 3mm; border-bottom: 1px solid #000; font-size: 7pt; }
+.to { flex: 1; padding: 5mm 3mm; font-style: normal; font-size: 13pt; line-height: 1.35; }
+.tracking { display: block; width: 88mm; margin: 0 auto 3mm; }
+footer { display: flex; align-items: center; gap: 4mm; padding: 2mm 3mm; border-top: 1px solid #000; }
+footer ul { margin: 0; padding: 0; list-style: none; font-size: 8pt; line-height: 1.5; }

@@ -1,0 +1,9 @@
+{
+  "name": "Jane Doe",
+  "course": "Analytical Engines 101",
+  "completed_on": "2026-09-10",
+  "hours": 16,
+  "instructor": "John Doe",
+  "id": "cert-8841",
+  "verify_url": "https://academy.example/verify/cert-8841"
+}

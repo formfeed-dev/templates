@@ -1,0 +1,54 @@
+{
+  "company": {
+    "name": "Fennlor Studio GmbH",
+    "street": "Musterstraße 1",
+    "city": "12345 Musterstadt"
+  },
+  "employee": {
+    "name": "Max Mustermann",
+    "number": "E-0417",
+    "role": "Senior engineer",
+    "tax_id": "00 000 000 000"
+  },
+  "period": {
+    "month": "2026-09-01",
+    "paid_on": "2026-09-30"
+  },
+  "earnings": [
+    {
+      "label": "Base salary",
+      "amount": 5800
+    },
+    {
+      "label": "On-call allowance",
+      "amount": 320
+    }
+  ],
+  "deductions": [
+    {
+      "label": "Income tax",
+      "amount": 1236.5
+    },
+    {
+      "label": "Solidarity surcharge",
+      "amount": 0
+    },
+    {
+      "label": "Pension insurance",
+      "amount": 569.16
+    },
+    {
+      "label": "Health insurance",
+      "amount": 520.2
+    },
+    {
+      "label": "Unemployment insurance",
+      "amount": 79.56
+    },
+    {
+      "label": "Long-term care insurance",
+      "amount": 110.16
+    }
+  ],
+  "net": 3604.42
+}

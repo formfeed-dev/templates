@@ -1,0 +1,32 @@
+<p class="sender">{{company.name}} · {{company.street}} · {{company.city}}</p>
+<address class="recipient">
+  <strong>{{customer.name}}</strong><br>
+  {{customer.contact}}<br>
+  {{customer.street}}<br>
+  {{customer.city}}
+</address>
+<table class="facts">
+  <tr><td>Datum</td><td>{{date letter.date "dd.MM.yyyy"}}</td></tr>
+  <tr><td>Kundennummer</td><td>{{customer.number}}</td></tr>
+  <tr><td>Vertrag</td><td>{{contract.number}}</td></tr>
+</table>
+
+<h1>Bestätigung Ihrer Kündigung</h1>
+<p>Guten Tag {{customer.contact}},</p>
+<p>
+  Ihre Kündigung des Vertrags <strong>{{contract.name}}</strong> ({{contract.number}}) ist am
+  {{date contract.received "d. MMMM yyyy"}} bei uns eingegangen. Wir bestätigen Ihnen hiermit, dass der Vertrag zum
+  <strong>{{date contract.ends "d. MMMM yyyy"}}</strong> endet.
+</p>
+<p>Bis zu diesem Tag können Sie alle Leistungen wie gewohnt nutzen.
+  {{#if contract.refund}}
+  Den bereits gezahlten Betrag für die Zeit nach Vertragsende, {{money contract.refund}}, erstatten wir Ihnen bis zum {{date contract.refund_by "dd.MM.yyyy"}} auf das bekannte Konto.
+  {{else}}
+  Es sind keine Beträge mehr offen, und es werden keine weiteren Abbuchungen vorgenommen.
+  {{/if}}
+</p>
+{{#if contract.export_until}}
+<p>Ihre Daten können Sie bis zum {{date contract.export_until "dd.MM.yyyy"}} exportieren. Danach löschen wir sie endgültig.</p>
+{{/if}}
+<p>Wir bedauern Ihre Entscheidung und danken Ihnen für die Zusammenarbeit.</p>
+<p>Mit freundlichen Grüßen<br>{{company.director}}</p>

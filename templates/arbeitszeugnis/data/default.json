@@ -1,0 +1,42 @@
+{
+  "company": {
+    "name": "Fennlor Studio GmbH",
+    "street": "Musterstraße 1",
+    "city": "12345 Musterstadt",
+    "phone": "+49 000 0000000",
+    "email": "hallo@fennlor.example",
+    "iban": "DE36000000000000000000",
+    "bic": "XXXXDEXXXXX",
+    "vat_id": "DE000000000",
+    "register": "Amtsgericht Musterstadt, HRB 00000",
+    "director": "Erika Mustermann"
+  },
+  "employee": {
+    "salutation": "Frau",
+    "name": "Erika Mustermann",
+    "born": "1990-04-12",
+    "from": "2021-03-01",
+    "until": "2026-09-30",
+    "role": "Senior Software Engineer"
+  },
+  "reference": {
+    "kind": "Arbeitszeugnis",
+    "place": "Musterstadt",
+    "signers": [
+      {
+        "name": "Max Mustermann",
+        "role": "Geschäftsführung"
+      },
+      {
+        "name": "Jane Doe",
+        "role": "Leitung Entwicklung"
+      }
+    ],
+    "sections": [
+      "Die Fennlor Studio GmbH entwickelt Software für die Dokumentenerstellung. Zu den Aufgaben von Frau Mustermann gehörten:\n\n- Konzeption und Umsetzung der Rendering-Pipeline\n- fachliche Führung eines Teams von vier Entwicklerinnen und Entwicklern\n- Abstimmung mit Kunden in technischen Fragen",
+      "Frau Mustermann verfügt über ein **umfassendes und fundiertes Fachwissen**, das sie stets sicher und erfolgreich in der Praxis einsetzte. Sie arbeitete jederzeit selbstständig, sorgfältig und zielorientiert und erledigte ihre Aufgaben stets zu unserer vollsten Zufriedenheit.",
+      "Ihr Verhalten gegenüber Vorgesetzten, Kolleginnen, Kollegen und Kunden war jederzeit vorbildlich.",
+      "Frau Mustermann verlässt unser Unternehmen auf eigenen Wunsch. Wir bedauern ihre Entscheidung, danken ihr für die stets sehr gute Zusammenarbeit und wünschen ihr beruflich wie persönlich alles Gute und weiterhin viel Erfolg."
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "German invoice with GiroCode",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "Line items, net, VAT and gross computed in the template, dates in German format with a due date 14 days out, a SEPA QR code banking apps scan, and a running footer with page numbers. Your code sends the facts; the template owns the legal layout.",
+  "tags": []
+}

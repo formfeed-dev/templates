@@ -1,0 +1,31 @@
+<header>
+  <p class="brand">{{ company.name }}</p>
+  <p class="muted">{{ company.street }} · {{ company.city }}</p>
+</header>
+
+<h1>Quote {{ quote.number }}</h1>
+<p class="muted">
+  For {{ customer.name }} · issued {{ quote.date | date: "d MMMM yyyy" }} ·
+  valid until {{ quote.date | dateAdd: 30, "days" | date: "d MMMM yyyy" }}
+</p>
+
+<table>
+  <thead>
+    <tr><th>Item</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Amount</th></tr>
+  </thead>
+  <tbody>
+    {% for line in quote.lines %}
+    <tr>
+      <td>{{ line.description }}</td>
+      <td class="num">{{ line.qty }}</td>
+      <td class="num">{{ line.price | money }}</td>
+      <td class="num">{{ line.total | money }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr><td colspan="3">Total</td><td class="num">{{ quote.lines | sum: "total" | money }}</td></tr>
+  </tfoot>
+</table>
+
+<p class="notes">{{ quote.notes }}</p>

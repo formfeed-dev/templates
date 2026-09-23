@@ -1,0 +1,7 @@
+{
+  "name": "German packing list (Packliste) grouped by package",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "The request sends one flat list of items; `groupBy` turns it into a section per package with its own table and weight, and the opening line counts packages, items and kilograms. A package never splits across two pages.",
+  "tags": []
+}

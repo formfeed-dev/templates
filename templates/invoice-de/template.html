@@ -1,0 +1,42 @@
+<p class="sender">{{ company.name }} · {{ company.street }} · {{ company.city }}</p>
+
+<address class="recipient">
+  <strong>{{ customer.name }}</strong><br>
+  {{ customer.street }}<br>
+  {{ customer.city }}
+</address>
+
+<h1>Rechnung {{ invoice.number }}</h1>
+<p class="meta">
+  Datum {{ invoice.date | date('dd.MM.yyyy') }},
+  fällig am {{ invoice.date | dateAdd(14, 'days') | date('dd.MM.yyyy') }}
+</p>
+
+<table class="lines">
+  <thead>
+    <tr><th>Leistung</th><th class="num">Menge</th><th class="num">Preis</th><th class="num">Summe</th></tr>
+  </thead>
+  <tbody>
+    {% for line in invoice.lines %}
+    <tr>
+      <td>{{ line.description }}</td>
+      <td class="num">{{ line.qty | number(0) }}</td>
+      <td class="num">{{ line.price | money }}</td>
+      <td class="num">{{ line.total | money }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% set net = invoice.lines | sum('total') %}
+{% set vat = net * invoice.vat_rate / 100 %}
+<table class="totals">
+  <tr><td>Netto</td><td class="num">{{ net | money }}</td></tr>
+  <tr><td>USt. {{ invoice.vat_rate }} %</td><td class="num">{{ vat | money }}</td></tr>
+  <tr class="grand"><td>Gesamt</td><td class="num">{{ (net + vat) | money }}</td></tr>
+</table>
+
+<figure class="pay">
+  <img src="{{ epcQr({ name: company.name, iban: company.iban, bic: company.bic, amount: net + vat, text: 'Rechnung ' ~ invoice.number }, { size: 110 }) }}" alt="GiroCode">
+  <figcaption>Mit der Banking-App scannen und bezahlen</figcaption>
+</figure>

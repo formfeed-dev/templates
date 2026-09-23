@@ -1,0 +1,14 @@
+body { font-family: 'Inter', sans-serif; font-size: 9.5pt; line-height: 1.5; color: #1e293b; }
+.issuer { margin: 0 0 12mm; padding-bottom: 4mm; border-bottom: 1px solid #cbd5e1; }
+h1 { margin: 0 0 1mm; font-size: 15pt; }
+h2 { margin: 8mm 0 2mm; font-size: 8pt; letter-spacing: 0.05em; text-transform: uppercase; color: #64748b; }
+.muted { margin: 0; font-size: 8pt; color: #64748b; }
+.box { margin: 0; padding: 3mm 4mm; border: 1px solid #cbd5e1; border-radius: 1.5mm; }
+.amount { width: 100%; margin: 8mm 0 6mm; border-collapse: collapse; }
+.amount th { padding: 0 2mm 1.5mm 0; text-align: left; font-size: 7.5pt; font-weight: 400; color: #64748b; }
+.amount td { padding: 2.5mm 2mm 2.5mm 0; border-top: 1.5px solid #1e293b; border-bottom: 1px solid #cbd5e1; font-weight: 600; }
+p { margin: 0 0 4mm; }
+.sign { margin-top: 14mm; break-inside: avoid; }
+.sign div { width: 80mm; margin-top: 14mm; font-size: 8pt; color: #64748b; }
+.sign span { display: block; margin-bottom: 1.5mm; border-top: 1px solid #1e293b; }
+.note { margin-top: 12mm; font-size: 7.5pt; color: #64748b; }

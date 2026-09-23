@@ -1,0 +1,7 @@
+{
+  "name": "Event ticket with QR code and PDF417",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "A print-at-home ticket on its own paper size, 210 × 80 mm without margins: a QR code for the check-in app on the stub, the ticket number again as a PDF417 strip for hand scanners, and the start time, doors and weekday formatted in German from two timestamps.",
+  "tags": []
+}

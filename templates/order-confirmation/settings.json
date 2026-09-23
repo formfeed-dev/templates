@@ -1,0 +1,13 @@
+{
+  "paper": {
+    "format": "A5"
+  },
+  "margin": {
+    "top": "16mm",
+    "right": "14mm",
+    "bottom": "16mm",
+    "left": "14mm"
+  },
+  "locale": "en-GB",
+  "currency": "EUR"
+}

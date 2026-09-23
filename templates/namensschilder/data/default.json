@@ -1,0 +1,60 @@
+{
+  "event": {
+    "name": "Fennlor Konferenz 2026"
+  },
+  "attendees": [
+    {
+      "first_name": "Erika",
+      "last_name": "Mustermann",
+      "organisation": "Fennlor Studio GmbH",
+      "role": "speaker"
+    },
+    {
+      "first_name": "Max",
+      "last_name": "Mustermann",
+      "organisation": "Olvarest GmbH"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "organisation": "Olvarest Ltd",
+      "role": "speaker"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Doe",
+      "organisation": "Fennlor Studio Ltd",
+      "role": "team"
+    },
+    {
+      "first_name": "Erika",
+      "last_name": "Musterfrau"
+    },
+    {
+      "first_name": "Max",
+      "last_name": "Beispiel",
+      "organisation": "Stadt Musterstadt"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Roe",
+      "organisation": "Olvarest GmbH"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Roe",
+      "organisation": "Fennlor Akademie",
+      "role": "team"
+    },
+    {
+      "first_name": "Erika",
+      "last_name": "Beispiel",
+      "organisation": "Hochschule Beispielstadt"
+    },
+    {
+      "first_name": "Max",
+      "last_name": "Musterfrau",
+      "organisation": "Olvarest GmbH"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "German payment reminder (Mahnung) with GiroCode",
+  "kind": "pdf",
+  "engine": "handlebars",
+  "description": "A dunning letter in Handlebars: the wording changes with the final notice, open invoices are summed with interest and the reminder fee through nested helpers, and a GiroCode carries the total and the payment reference. The dunning run for all customers is one batch.",
+  "tags": []
+}

@@ -1,0 +1,24 @@
+{
+  "report": {
+    "title": "Revenue report",
+    "period": "Q3 2026",
+    "date": "2026-10-02"
+  },
+  "months": [
+    {
+      "month": "July",
+      "orders": 312,
+      "revenue": 48200
+    },
+    {
+      "month": "August",
+      "orders": 287,
+      "revenue": 44950
+    },
+    {
+      "month": "September",
+      "orders": 356,
+      "revenue": 57310
+    }
+  ]
+}

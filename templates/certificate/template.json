@@ -1,0 +1,7 @@
+{
+  "name": "Course certificate in Handlebars",
+  "kind": "pdf",
+  "engine": "handlebars",
+  "description": "A landscape certificate with a verification QR code, rendered one at a time as PNG or for a whole course as a batch that ends in a zip. Handlebars takes options as hash arguments: `{{qrcode verify_url size=96}}`.",
+  "tags": []
+}
