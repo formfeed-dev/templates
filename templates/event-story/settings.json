@@ -1,0 +1,11 @@
+{
+  "image": {
+    "width": 1080,
+    "height": 1920,
+    "deviceScaleFactor": 1,
+    "format": "png"
+  },
+  "tailwind": true,
+  "locale": "en-GB",
+  "timezone": "Europe/London"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Review card, 1080×1080",
+  "kind": "image",
+  "engine": "handlebars",
+  "description": "A square card for Instagram and LinkedIn from one customer review: `range` and `lt` draw the rating as five stars, `truncate` keeps a long quote inside the square, and the date of the review is written out as month and year.",
+  "tags": []
+}

@@ -1,0 +1,60 @@
+{
+  "shop": {
+    "name": "Fennlor Coffee",
+    "street": "1 Example Street",
+    "city": "Exampletown",
+    "vat_id": "GB000000000"
+  },
+  "receipt": {
+    "number": "R-2026-004721",
+    "issued": "2026-09-28T07:41:00Z",
+    "till": 2,
+    "served_by": "Jane",
+    "url": "https://fennlor.example/r/R-2026-004721",
+    "lines": [
+      {
+        "name": "Flat white",
+        "qty": 2,
+        "price": 3.4,
+        "total": 6.8,
+        "vat": "A"
+      },
+      {
+        "name": "Almond croissant",
+        "qty": 1,
+        "price": 3.1,
+        "total": 3.1,
+        "vat": "Z"
+      },
+      {
+        "name": "Coffee beans, house blend 250 g",
+        "qty": 1,
+        "price": 8.5,
+        "total": 8.5,
+        "vat": "Z"
+      },
+      {
+        "name": "Enamel mug, sand",
+        "qty": 1,
+        "price": 12,
+        "total": 12,
+        "vat": "A"
+      }
+    ],
+    "payment": {
+      "method": "Card",
+      "card": "•••• 0000",
+      "amount": 30.4
+    }
+  },
+  "vat_rates": [
+    {
+      "code": "A",
+      "rate": 20
+    },
+    {
+      "code": "Z",
+      "rate": 0
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "company": {
+    "name": "Fennlor Studio Ltd",
+    "street": "1 Example Street",
+    "city": "Exampletown",
+    "email": "trade@fennlor.example"
+  },
+  "list": {
+    "title": "Trade price list",
+    "season": "Autumn/Winter 2026",
+    "valid_until": "2027-03-31",
+    "terms": [
+      "Minimum order £250; free delivery within the UK from £750.",
+      "Lamps ship in packs of two, shades in packs of four and bulbs in packs of ten.",
+      "Prices exclude VAT and may change with thirty days’ notice."
+    ]
+  },
+  "products": [
+    {
+      "sku": "FF-1030",
+      "name": "Task lamp Line, black",
+      "category": "Desk lamps",
+      "ean": "2000000010304",
+      "price": 92,
+      "pack": 2
+    },
+    {
+      "sku": "FF-1001",
+      "name": "Desk lamp Arc, black",
+      "category": "Desk lamps",
+      "ean": "2000000010014",
+      "price": 64,
+      "pack": 2
+    },
+    {
+      "sku": "FF-1020",
+      "name": "Reading lamp Fold, brass",
+      "category": "Desk lamps",
+      "ean": "2000000010205",
+      "price": 118,
+      "pack": 2
+    },
+    {
+      "sku": "FF-1002",
+      "name": "Desk lamp Arc, white",
+      "category": "Desk lamps",
+      "ean": "2000000010021",
+      "price": 64,
+      "pack": 2
+    },
+    {
+      "sku": "FF-1010",
+      "name": "Clamp lamp Studio, graphite",
+      "category": "Desk lamps",
+      "ean": "2000000010106",
+      "price": 49.5,
+      "pack": 2
+    },
+    {
+      "sku": "FF-2010",
+      "name": "Pendant Cone, smoked glass",
+      "category": "Pendant lights",
+      "ean": "2000000020105",
+      "price": 138,
+      "pack": 1
+    },
+    {
+      "sku": "FF-2001",
+      "name": "Pendant Dome 30 cm, sand",
+      "category": "Pendant lights",
+      "ean": "2000000020013",
+      "price": 76,
+      "pack": 1
+    },
+    {
+      "sku": "FF-2020",
+      "name": "Cluster pendant, three lights",
+      "category": "Pendant lights",
+      "ean": "2000000020204",
+      "price": 229,
+      "pack": 1
+    },
+    {
+      "sku": "FF-2002",
+      "name": "Pendant Dome 45 cm, sand",
+      "category": "Pendant lights",
+      "ean": "2000000020020",
+      "price": 104,
+      "pack": 1
+    },
+    {
+      "sku": "FF-3002",
+      "name": "Linen shade 35 cm, natural",
+      "category": "Shades",
+      "ean": "2000000030029",
+      "price": 16.8,
+      "pack": 4
+    },
+    {
+      "sku": "FF-3020",
+      "name": "Rattan shade 30 cm",
+      "category": "Shades",
+      "ean": "2000000030203",
+      "price": 21.5,
+      "pack": 4
+    },
+    {
+      "sku": "FF-3001",
+      "name": "Linen shade 25 cm, natural",
+      "category": "Shades",
+      "ean": "2000000030012",
+      "price": 12.4,
+      "pack": 4
+    },
+    {
+      "sku": "FF-3010",
+      "name": "Paper shade 40 cm, white",
+      "category": "Shades",
+      "ean": "2000000030104",
+      "price": 9.9,
+      "pack": 4
+    },
+    {
+      "sku": "FF-4010",
+      "name": "LED filament G95, 470 lm",
+      "category": "Bulbs",
+      "ean": "2000000040103",
+      "price": 5.6,
+      "pack": 10
+    },
+    {
+      "sku": "FF-4001",
+      "name": "LED bulb E27, 806 lm, warm white",
+      "category": "Bulbs",
+      "ean": "2000000040011",
+      "price": 3.2,
+      "pack": 10
+    },
+    {
+      "sku": "FF-4030",
+      "name": "LED spot GU10, 345 lm",
+      "category": "Bulbs",
+      "ean": "2000000040301",
+      "price": 2.4,
+      "pack": 10
+    },
+    {
+      "sku": "FF-4002",
+      "name": "LED bulb E27, 1521 lm, warm white",
+      "category": "Bulbs",
+      "ean": "2000000040028",
+      "price": 4.9,
+      "pack": 10
+    },
+    {
+      "sku": "FF-4020",
+      "name": "LED candle E14, 470 lm",
+      "category": "Bulbs",
+      "ean": "2000000040202",
+      "price": 2.9,
+      "pack": 10
+    }
+  ]
+}

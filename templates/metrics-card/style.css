@@ -1,0 +1,21 @@
+body { margin: 0; }
+.card {
+  box-sizing: border-box;
+  width: 1200px;
+  height: 675px;
+  padding: 52px 80px 40px;
+  background: #0f172a;
+  font-family: 'Inter', sans-serif;
+  color: #f8fafc;
+}
+header { display: flex; justify-content: space-between; align-items: baseline; }
+.brand { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #a5b4fc; }
+h1 { margin: 0; font-size: 36px; font-weight: 700; }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 34px 0 30px; }
+.kpis div { padding: 20px 24px; border-radius: 16px; background: #1e293b; }
+.kpis span { display: block; font-size: 17px; color: #94a3b8; }
+.kpis strong { display: block; margin: 6px 0 4px; font-size: 40px; font-weight: 700; }
+.kpis em { font-size: 17px; font-style: normal; color: #94a3b8; }
+.kpis em.up { color: #4ade80; }
+.kpis em.down { color: #f87171; }
+.ff-chart { display: block; }

@@ -1,0 +1,56 @@
+{% comment %} The roll is as long as the receipt: fixed blocks plus 5 mm per item and 4.5 mm per VAT rate. {% endcomment %}
+{% assign items = receipt.lines | size %}
+{% assign rates = vat_rates | size | times: 4.5 %}
+{% assign length = items | times: 5 | plus: 131 | plus: rates %}
+<style>@page { size: 80mm {{ length }}mm; }</style>
+
+<header class="shop">
+  <h1>{{ shop.name }}</h1>
+  <p>{{ shop.street }}, {{ shop.city }}</p>
+  <p>VAT {{ shop.vat_id }}</p>
+</header>
+
+<dl class="meta">
+  <div><dt>Date</dt><dd>{{ receipt.issued | date: 'd MMM yyyy, HH:mm' }}</dd></div>
+  <div><dt>Receipt</dt><dd>{{ receipt.number }}</dd></div>
+  <div><dt>Till</dt><dd>{{ receipt.till }} · {{ receipt.served_by }}</dd></div>
+</dl>
+
+<ul class="items">
+  {% for line in receipt.lines %}
+  <li>
+    <span class="name">{{ line.qty }} × {{ line.name }}{% if line.qty > 1 %} @ {{ line.price | number: 2 }}{% endif %}</span>
+    <span>{{ line.total | number: 2 }}</span>
+    <span class="code">{{ line.vat }}</span>
+  </li>
+  {% endfor %}
+</ul>
+
+<div class="totals">
+  <p class="grand"><span>Total</span><span>{{ receipt.lines | sum: 'total' | money }}</span></p>
+  <p><span>{{ receipt.payment.method }} {{ receipt.payment.card }}</span><span>{{ receipt.payment.amount | money }}</span></p>
+</div>
+
+<table class="vat">
+  <tr><th>VAT rate</th><th>Net</th><th>VAT</th><th>Gross</th></tr>
+  {% for rate in vat_rates %}
+  {% assign gross = receipt.lines | where: 'vat', rate.code | sum: 'total' %}
+  {% assign divisor = rate.rate | plus: 100 %}
+  {% assign vat = gross | times: rate.rate | divided_by: divisor %}
+  <tr>
+    <td>{{ rate.code }} {{ rate.rate }}%</td>
+    <td>{{ gross | minus: vat | number: 2 }}</td>
+    <td>{{ vat | number: 2 }}</td>
+    <td>{{ gross | number: 2 }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<div class="codes">
+  <img class="barcode" src="{{ receipt.number | barcode: type: 'code128', height: 9 }}" alt="Receipt number">
+  <div class="returns">
+    <img src="{{ receipt.url | qrcode: size: 80 }}" alt="Digital receipt">
+    <p>Returns and exchanges until {{ receipt.issued | dateAdd: 30, 'days' | date: 'd MMMM yyyy' }} with this receipt. Scan the code for a digital copy.</p>
+  </div>
+</div>
+<p class="thanks">Thank you for visiting</p>

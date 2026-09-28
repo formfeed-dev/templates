@@ -1,0 +1,162 @@
+{
+  "shop": {
+    "name": "Fennlor Studio shop"
+  },
+  "period": "2026-09-01",
+  "previous": {
+    "label": "August",
+    "orders": 2231
+  },
+  "days": [
+    {
+      "date": "2026-09-01",
+      "orders": 64,
+      "revenue": 5376
+    },
+    {
+      "date": "2026-09-02",
+      "orders": 71,
+      "revenue": 5989
+    },
+    {
+      "date": "2026-09-03",
+      "orders": 69,
+      "revenue": 5846
+    },
+    {
+      "date": "2026-09-04",
+      "orders": 83,
+      "revenue": 7047
+    },
+    {
+      "date": "2026-09-05",
+      "orders": 104,
+      "revenue": 8836
+    },
+    {
+      "date": "2026-09-06",
+      "orders": 112,
+      "revenue": 9533
+    },
+    {
+      "date": "2026-09-07",
+      "orders": 58,
+      "revenue": 5022
+    },
+    {
+      "date": "2026-09-08",
+      "orders": 66,
+      "revenue": 5719
+    },
+    {
+      "date": "2026-09-09",
+      "orders": 73,
+      "revenue": 6332
+    },
+    {
+      "date": "2026-09-10",
+      "orders": 70,
+      "revenue": 5880
+    },
+    {
+      "date": "2026-09-11",
+      "orders": 88,
+      "revenue": 7417
+    },
+    {
+      "date": "2026-09-12",
+      "orders": 109,
+      "revenue": 9206
+    },
+    {
+      "date": "2026-09-13",
+      "orders": 117,
+      "revenue": 9903
+    },
+    {
+      "date": "2026-09-14",
+      "orders": 61,
+      "revenue": 5224
+    },
+    {
+      "date": "2026-09-15",
+      "orders": 68,
+      "revenue": 5837
+    },
+    {
+      "date": "2026-09-16",
+      "orders": 75,
+      "revenue": 6450
+    },
+    {
+      "date": "2026-09-17",
+      "orders": 72,
+      "revenue": 6223
+    },
+    {
+      "date": "2026-09-18",
+      "orders": 91,
+      "revenue": 7844
+    },
+    {
+      "date": "2026-09-19",
+      "orders": 113,
+      "revenue": 9492
+    },
+    {
+      "date": "2026-09-20",
+      "orders": 121,
+      "revenue": 10189
+    },
+    {
+      "date": "2026-09-21",
+      "orders": 63,
+      "revenue": 5342
+    },
+    {
+      "date": "2026-09-22",
+      "orders": 70,
+      "revenue": 5955
+    },
+    {
+      "date": "2026-09-23",
+      "orders": 77,
+      "revenue": 6568
+    },
+    {
+      "date": "2026-09-24",
+      "orders": 74,
+      "revenue": 6341
+    },
+    {
+      "date": "2026-09-25",
+      "orders": 94,
+      "revenue": 8046
+    },
+    {
+      "date": "2026-09-26",
+      "orders": 118,
+      "revenue": 10087
+    },
+    {
+      "date": "2026-09-27",
+      "orders": 126,
+      "revenue": 10784
+    },
+    {
+      "date": "2026-09-28",
+      "orders": 66,
+      "revenue": 5544
+    },
+    {
+      "date": "2026-09-29",
+      "orders": 72,
+      "revenue": 6073
+    },
+    {
+      "date": "2026-09-30",
+      "orders": 79,
+      "revenue": 6686
+    }
+  ]
+}

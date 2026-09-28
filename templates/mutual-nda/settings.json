@@ -1,0 +1,21 @@
+{
+  "paper": {
+    "format": "A4"
+  },
+  "margin": {
+    "top": "26mm",
+    "right": "22mm",
+    "bottom": "26mm",
+    "left": "22mm"
+  },
+  "header": {
+    "height": "14mm",
+    "padding": "0 22mm"
+  },
+  "footer": {
+    "height": "14mm",
+    "padding": "0 22mm"
+  },
+  "locale": "en-GB",
+  "timezone": "Europe/London"
+}

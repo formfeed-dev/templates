@@ -1,0 +1,67 @@
+{% set subtotal = invoice.lines | sum('amount') %}
+{% set taxable = invoice.lines | where('taxable', true) | sum('amount') %}
+{% set tax = (taxable * invoice.tax_rate / 100) | round(2) %}
+{% set total = subtotal + tax %}
+{% set paid = invoice.payments | sum('amount') %}
+{% set balance = total - paid %}
+
+<header class="top">
+  <div>
+    <p class="brand">{{ company.name }}</p>
+    <p class="muted">{{ company.street }}<br>{{ company.city }}</p>
+  </div>
+  <div class="title">
+    <h1>Invoice</h1>
+    <p class="muted">{{ invoice.number }}</p>
+    {% if balance <= 0 %}<p class="status paid">Paid</p>{% elif paid > 0 %}<p class="status partial">Partially paid</p>{% endif %}
+  </div>
+</header>
+
+<section class="parties">
+  <div>
+    <h2>Bill to</h2>
+    <p><strong>{{ customer.name }}</strong><br>Attn: {{ customer.contact }}<br>{{ customer.street }}<br>{{ customer.city }}</p>
+  </div>
+  <dl>
+    <div><dt>Invoice date</dt><dd>{{ invoice.date | date('MMMM d, yyyy') }}</dd></div>
+    <div><dt>Terms</dt><dd>Net {{ invoice.terms_days }}</dd></div>
+    <div><dt>Due date</dt><dd>{{ invoice.date | dateAdd(invoice.terms_days, 'days') | date('MMMM d, yyyy') }}</dd></div>
+    <div><dt>PO number</dt><dd>{{ invoice.po | default('—') }}</dd></div>
+  </dl>
+</section>
+
+<table class="lines">
+  <thead>
+    <tr><th>Description</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Amount</th></tr>
+  </thead>
+  <tbody>
+    {% for line in invoice.lines %}
+    <tr>
+      <td>{{ line.description }}{% if line.taxable %} <span class="taxed">T</span>{% endif %}</td>
+      <td class="num">{{ line.qty | number }}</td>
+      <td class="num">{{ line.rate | money }}</td>
+      <td class="num">{{ line.amount | money }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<section class="summary">
+  <div class="pay">
+    {% if balance > 0 %}
+    <img src="{{ qrcode(invoice.pay_url, { size: 96 }) }}" alt="Pay online">
+    <p><strong>Pay online</strong><br>Scan the code or open<br>{{ invoice.pay_url | replace('https://', '') }}</p>
+    {% endif %}
+  </div>
+  <table class="totals">
+    <tr><td>Subtotal</td><td class="num">{{ subtotal | money }}</td></tr>
+    <tr><td>Sales tax {{ invoice.tax_rate }}% on {{ taxable | money }} <span class="taxed">T</span></td><td class="num">{{ tax | money }}</td></tr>
+    <tr class="total"><td>Total</td><td class="num">{{ total | money }}</td></tr>
+    {% for payment in invoice.payments %}
+    <tr><td>Paid {{ payment.date | date('MMM d') }}, {{ payment.method }}</td><td class="num">−{{ payment.amount | money }}</td></tr>
+    {% endfor %}
+    <tr class="due"><td>Balance due</td><td class="num">{{ balance | money }}</td></tr>
+  </table>
+</section>
+
+<p class="notes">{{ invoice.notes }}</p>

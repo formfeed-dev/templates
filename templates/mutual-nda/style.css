@@ -1,0 +1,13 @@
+body { font-family: 'Source Serif 4', serif; font-size: 10.5pt; line-height: 1.5; color: #1e293b; }
+h1 { margin: 0 0 6mm; font-size: 19pt; font-weight: 600; }
+p { margin: 0 0 3mm; }
+ol.parties { margin: 0 0 3mm; padding-left: 7mm; }
+ol.parties li { margin-bottom: 1.5mm; }
+ol.clauses { margin: 6mm 0 0; padding: 0; list-style: none; counter-reset: clause; }
+ol.clauses > li { counter-increment: clause; margin-bottom: 4mm; }
+ol.clauses h2 { margin: 0 0 1mm; font-size: 10.5pt; font-weight: 600; break-after: avoid; }
+ol.clauses h2::before { content: counter(clause) ". "; }
+.signatures { display: flex; gap: 14mm; margin-top: 12mm; break-inside: avoid; }
+.signatures div { flex: 1; }
+.signatures p { margin: 0; font-size: 9.5pt; }
+.signatures .line { display: block; height: 12mm; border-bottom: 1px solid #1e293b; margin-bottom: 1.5mm; }

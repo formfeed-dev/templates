@@ -1,0 +1,7 @@
+{
+  "name": "Metrics card with a chart, 1200×675",
+  "kind": "image",
+  "engine": "jinja2",
+  "description": "A 16:9 card for Slack, LinkedIn or X from thirty days of orders: totals, the change on the month before, the busiest day found with `sortBy` and `first`, and a Chart.js bar chart styled for a dark background, all computed in the template.",
+  "tags": []
+}

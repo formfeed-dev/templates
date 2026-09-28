@@ -1,0 +1,7 @@
+{
+  "name": "Annual report with contents and bookmarks",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "A four-page report: a cover with a linked table of contents, KPI cards, a line chart comparing two years, regions sorted by revenue and an appendix of accounts grouped by region. `pdf.outline` turns the headings into bookmarks, and no region is split across a page.",
+  "tags": []
+}

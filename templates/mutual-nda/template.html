@@ -1,0 +1,56 @@
+<h1>Mutual Non-Disclosure Agreement</h1>
+<p>This agreement is dated {{date agreement.date "d MMMM yyyy"}} and made between:</p>
+<ol class="parties">
+  <li><strong>{{party_a.name}}</strong>, a company registered in {{party_a.jurisdiction}} under number {{party_a.number}}, whose registered office is at {{party_a.address}}; and</li>
+  <li><strong>{{party_b.name}}</strong>, a company registered in {{party_b.jurisdiction}} under number {{party_b.number}}, whose registered office is at {{party_b.address}},</li>
+</ol>
+<p>each a “Party” and together the “Parties”. The Parties intend to discuss {{agreement.purpose}} (the “Purpose”) and will share confidential information for the Purpose only.</p>
+
+<ol class="clauses">
+  <li>
+    <h2>Confidential Information</h2>
+    <p>“Confidential Information” means any information that one Party (the “Discloser”) discloses to the other (the “Recipient”) in connection with the Purpose, in any form, including {{join agreement.includes ", "}}, and any other information that a reasonable person would understand to be confidential.</p>
+  </li>
+  <li>
+    <h2>Obligations</h2>
+    <p>The Recipient shall use the Confidential Information only for the Purpose; keep it confidential and protect it with at least the care it applies to its own confidential information, and no less than reasonable care; and disclose it only to those of its employees, officers and professional advisers who need to know it for the Purpose and are bound by duties of confidentiality no less strict than these.</p>
+  </li>
+  <li>
+    <h2>Exceptions</h2>
+    <p>The obligations above do not apply to information that is or becomes public other than through a breach of this agreement, that the Recipient held without restriction before it was disclosed, that the Recipient receives lawfully from a third party without restriction, or that the Recipient develops independently. The Recipient may disclose Confidential Information where the law or a court requires it, giving the Discloser prompt notice where it is allowed to.</p>
+  </li>
+  <li>
+    <h2>Term</h2>
+    <p>This agreement starts on {{date agreement.effective "d MMMM yyyy"}} and lasts {{numToWords agreement.term_years "en"}} ({{agreement.term_years}}) years, until {{date (dateAdd agreement.effective agreement.term_years "years") "d MMMM yyyy"}}. The duty to keep information confidential continues for {{numToWords agreement.survival_years "en"}} ({{agreement.survival_years}}) years after it ends.</p>
+  </li>
+  <li>
+    <h2>Return and destruction</h2>
+    <p>On the Discloser’s written request, the Recipient shall promptly return or destroy the Confidential Information it holds, except copies it must keep by law or that sit in routine back-up systems, which remain subject to this agreement.</p>
+  </li>
+  {{#if agreement.non_solicitation_months}}
+  <li>
+    <h2>Non-solicitation</h2>
+    <p>During the term and for {{numToWords agreement.non_solicitation_months "en"}} ({{agreement.non_solicitation_months}}) months after it, neither Party shall solicit for employment an employee of the other Party with whom it dealt in connection with the Purpose. General advertisements not aimed at such employees do not break this clause.</p>
+  </li>
+  {{/if}}
+  <li>
+    <h2>No licence, no obligation</h2>
+    <p>Confidential Information remains the property of the Discloser. Nothing in this agreement grants a licence to it or obliges either Party to enter into any further agreement.</p>
+  </li>
+  <li>
+    <h2>Governing law</h2>
+    <p>This agreement and any dispute arising from it are governed by the law of {{agreement.governing_law}}, and the courts of {{agreement.governing_law}} have exclusive jurisdiction.</p>
+  </li>
+</ol>
+
+<section class="signatures">
+  {{#each signatories}}
+  <div>
+    <p>Signed for and on behalf of<br><strong>{{party}}</strong></p>
+    <span class="line"></span>
+    <p>{{name}}, {{title}}</p>
+    <span class="line"></span>
+    <p>Date</p>
+  </div>
+  {{/each}}
+</section>

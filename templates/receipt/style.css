@@ -1,0 +1,24 @@
+body { margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 7.5pt; color: #111827; }
+.shop { height: 22mm; box-sizing: border-box; padding-top: 3mm; border-bottom: 1px dashed #111827; text-align: center; }
+.shop h1 { margin: 0 0 2mm; font-size: 12pt; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+.shop p { margin: 0; line-height: 4mm; }
+.meta { height: 17mm; box-sizing: border-box; margin: 0; padding: 2mm 0; border-bottom: 1px dashed #111827; }
+.meta div { display: flex; justify-content: space-between; line-height: 4.3mm; }
+.meta dt, .meta dd { margin: 0; }
+.items { margin: 0; padding: 2mm 0; list-style: none; border-bottom: 1px dashed #111827; }
+.items li { display: flex; gap: 2mm; height: 5mm; line-height: 5mm; }
+.items .name { flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.items .code { width: 3mm; }
+.totals { height: 16mm; box-sizing: border-box; padding: 1.5mm 0; border-bottom: 1px dashed #111827; }
+.totals p { display: flex; justify-content: space-between; margin: 0; line-height: 5mm; }
+.totals .grand { font-size: 10.5pt; font-weight: 600; line-height: 7mm; }
+.vat { width: 100%; margin: 2mm 0; border-collapse: collapse; }
+.vat th, .vat td { height: 4.5mm; padding: 0; text-align: right; font-weight: 400; }
+.vat th:first-child, .vat td:first-child { text-align: left; }
+.vat th { color: #6b7280; }
+.codes { height: 44mm; box-sizing: border-box; padding-top: 2mm; border-top: 1px dashed #111827; }
+.barcode { display: block; height: 13mm; margin: 0 auto 3mm; }
+.returns { display: flex; align-items: center; gap: 3mm; }
+.returns img { width: 22mm; height: 22mm; }
+.returns p { margin: 0; font-size: 6.5pt; line-height: 3.4mm; }
+.thanks { height: 8mm; margin: 0; line-height: 8mm; text-align: center; font-weight: 600; }

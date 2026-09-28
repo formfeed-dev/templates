@@ -1,0 +1,92 @@
+{% set revenue = months | sum('revenue') %}
+{% set previous = months | sum('previous') %}
+{% set orders = months | sum('orders') %}
+{% set best = months | sortBy('revenue', 'desc') | first %}
+
+<section class="cover">
+  <p class="eyebrow">{{ report.company }}</p>
+  <h1>{{ report.title }}</h1>
+  <p class="lead">{{ report.subtitle }} · prepared {{ report.prepared | date('d MMMM yyyy') }}</p>
+
+  <nav class="contents" aria-label="Contents">
+    <p class="label">Contents</p>
+    <ol>
+      <li><a href="#summary">Summary</a><span>Revenue, orders and growth at a glance</span></li>
+      <li><a href="#months">Revenue by month</a><span>{{ report.year }} against {{ report.year - 1 }}, month by month</span></li>
+      <li><a href="#regions">Regions</a><span>Where the revenue came from, largest first</span></li>
+      <li><a href="#accounts">Largest accounts</a><span>The {{ accounts | length }} largest accounts, region by region</span></li>
+    </ol>
+  </nav>
+</section>
+
+<section class="chapter" id="summary">
+  <h2>Summary</h2>
+  <div class="kpis">
+    <div><span>Revenue</span><strong>£{{ revenue | number(0) }}</strong><em>+{{ ((revenue - previous) / previous * 100) | round(1) }}% on {{ report.year - 1 }}</em></div>
+    <div><span>Orders</span><strong>{{ orders | number(0) }}</strong><em>{{ customers }} customers</em></div>
+    <div><span>Average order</span><strong>{{ (revenue / orders) | money }}</strong><em>per order</em></div>
+    <div><span>Best month</span><strong>{{ best.label }}</strong><em>£{{ best.revenue | number(0) }}</em></div>
+  </div>
+  <p>{{ report.summary }}</p>
+</section>
+
+<section class="chapter" id="months">
+  <h2>Revenue by month</h2>
+  {{ chart({
+    type: 'line',
+    labels: months | pluck('label'),
+    series: [
+      { label: report.year - 1, values: months | pluck('previous'), color: '#94a3b8' },
+      { label: report.year, values: months | pluck('revenue'), color: '#4f46e5' }
+    ],
+    options: { devicePixelRatio: 3 },
+    width: 640,
+    height: 260
+  }) }}
+</section>
+
+<section class="chapter" id="regions">
+  <h2>Regions</h2>
+  <table class="figures">
+    <thead><tr><th>Region</th><th class="num">Customers</th><th class="num">Orders</th><th class="num">Revenue</th><th>Share</th></tr></thead>
+    <tbody>
+      {% for region in regions | sortBy('revenue', 'desc') %}
+      {% set share = (region.revenue / revenue * 100) | round(1) %}
+      <tr>
+        <td>{{ region.name }}</td>
+        <td class="num">{{ region.customers }}</td>
+        <td class="num">{{ region.orders | number(0) }}</td>
+        <td class="num">£{{ region.revenue | number(0) }}</td>
+        <td class="share"><span class="bar" style="width: {{ share }}%"></span>{{ share }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tbody class="total">
+      <tr><td>Total</td><td class="num">{{ regions | sum('customers') }}</td><td class="num">{{ regions | sum('orders') | number(0) }}</td><td class="num">£{{ regions | sum('revenue') | number(0) }}</td><td></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="chapter" id="accounts">
+  <h2>Largest accounts</h2>
+  <table class="figures accounts">
+    <thead><tr><th>Account</th><th class="num">Orders</th><th class="num">Revenue</th><th class="num">Average order</th></tr></thead>
+    {% for group in accounts | groupBy('region') %}
+    <tbody>
+      <tr class="group"><th colspan="4">{{ group.key }}</th></tr>
+      {% for account in group.items | sortBy('revenue', 'desc') %}
+      <tr>
+        <td>{{ account.account }}</td>
+        <td class="num">{{ account.orders }}</td>
+        <td class="num">£{{ account.revenue | number(0) }}</td>
+        <td class="num">{{ (account.revenue / account.orders) | money }}</td>
+      </tr>
+      {% endfor %}
+      <tr class="subtotal"><td>{{ group.items | length }} accounts</td><td class="num">{{ group.items | sum('orders') }}</td><td class="num">£{{ group.items | sum('revenue') | number(0) }}</td><td></td></tr>
+    </tbody>
+    {% endfor %}
+    <tbody class="total">
+      <tr><td>All {{ accounts | length }} accounts</td><td class="num">{{ accounts | sum('orders') | number(0) }}</td><td class="num">£{{ accounts | sum('revenue') | number(0) }}</td><td></td></tr>
+    </tbody>
+  </table>
+</section>

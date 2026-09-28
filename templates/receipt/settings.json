@@ -1,0 +1,16 @@
+{
+  "paper": {
+    "width": "80mm",
+    "height": "200mm"
+  },
+  "preferCssPageSize": true,
+  "margin": {
+    "top": "4mm",
+    "right": "4mm",
+    "bottom": "4mm",
+    "left": "4mm"
+  },
+  "locale": "en-GB",
+  "timezone": "Europe/London",
+  "currency": "GBP"
+}

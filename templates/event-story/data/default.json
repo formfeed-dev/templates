@@ -1,0 +1,28 @@
+{
+  "event": {
+    "host": "Fennlor Studio",
+    "title": "Light for long workdays",
+    "teaser": "Desk, ceiling and daylight for a small office in forty-five minutes, with a floor plan to take home.",
+    "starts": "2026-11-05T16:00:00Z",
+    "minutes": 45,
+    "zones": [
+      {
+        "city": "London",
+        "tz": "Europe/London"
+      },
+      {
+        "city": "Berlin",
+        "tz": "Europe/Berlin"
+      },
+      {
+        "city": "New York",
+        "tz": "America/New_York"
+      }
+    ],
+    "speakers": [
+      "Jane Doe",
+      "John Doe"
+    ],
+    "register_url": "https://fennlor.example/webinar"
+  }
+}

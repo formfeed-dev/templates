@@ -1,0 +1,41 @@
+{
+  "agreement": {
+    "date": "2026-09-28",
+    "effective": "2026-10-01",
+    "purpose": "a joint catalogue of lighting products for the 2027 season",
+    "includes": [
+      "product designs and drawings",
+      "prices and margins",
+      "customer and supplier lists",
+      "business plans"
+    ],
+    "term_years": 2,
+    "survival_years": 3,
+    "non_solicitation_months": 12,
+    "governing_law": "England and Wales"
+  },
+  "party_a": {
+    "name": "Fennlor Studio Ltd",
+    "jurisdiction": "England and Wales",
+    "number": "00000000",
+    "address": "1 Example Street, Exampletown"
+  },
+  "party_b": {
+    "name": "Olvarest Ltd",
+    "jurisdiction": "England and Wales",
+    "number": "00000000",
+    "address": "2 Example Road, Exampleville"
+  },
+  "signatories": [
+    {
+      "party": "Fennlor Studio Ltd",
+      "name": "Jane Doe",
+      "title": "Director"
+    },
+    {
+      "party": "Olvarest Ltd",
+      "name": "John Doe",
+      "title": "Managing Director"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Trade price list with EAN barcodes",
+  "kind": "pdf",
+  "engine": "liquid",
+  "description": "A product feed goes in unsorted. `groupBy` makes a section per category, `sortBy` orders each by name, `min` and `max` give the price range in the heading, and every row carries its EAN-13 barcode. A category never breaks across a page.",
+  "tags": []
+}

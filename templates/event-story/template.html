@@ -1,0 +1,26 @@
+<main class="flex h-480 w-270 flex-col bg-linear-to-b from-slate-950 via-indigo-950 to-indigo-800 px-24 py-30 font-['Inter'] text-white">
+  <p class="text-[32px] font-semibold uppercase tracking-[0.3em] text-indigo-300">{{ event.host }} · live webinar</p>
+  <h1 class="mt-18 text-[104px] font-bold leading-[1.02] tracking-tight">{{ event.title }}</h1>
+  <p class="mt-10 text-[40px] leading-snug text-indigo-100">{{ event.teaser }}</p>
+
+  <p class="mt-24 text-[36px] font-semibold text-indigo-300">{{ event.starts | date: 'EEEE d MMMM yyyy' }} · {{ event.minutes }} minutes</p>
+  <ul class="mt-6 border-t border-white/20">
+    {% for zone in event.zones %}
+    <li class="flex items-baseline justify-between border-b border-white/20 py-6.5">
+      <span class="text-[44px] text-indigo-100">{{ zone.city }}</span>
+      <span class="text-[64px] font-bold tabular-nums">{{ event.starts | date: 'HH:mm', zone.tz }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="mt-auto flex items-center gap-12">
+    <div class="rounded-3xl bg-white p-5">
+      <img class="h-55 w-55" src="{{ event.register_url | qrcode: size: 220 }}" alt="Register">
+    </div>
+    <div>
+      <p class="text-[40px] font-semibold">Save your seat</p>
+      <p class="mt-2 text-[32px] text-indigo-200">{{ event.register_url | replace: 'https://', '' }}</p>
+      <p class="mt-6 text-[28px] text-indigo-300">With {{ event.speakers | join: ' and ' }}</p>
+    </div>
+  </div>
+</main>

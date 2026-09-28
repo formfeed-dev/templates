@@ -1,0 +1,7 @@
+{
+  "name": "US invoice with sales tax",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "Letter paper, dollars and US dates from the template’s `en-US` locale. Sales tax applies only to the lines marked taxable, a deposit reduces the balance, the status badge and the pay-online QR code follow from what is left to pay.",
+  "tags": []
+}

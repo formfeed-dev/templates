@@ -1,0 +1,31 @@
+body { font-family: 'Inter', sans-serif; font-size: 9.5pt; color: #1e293b; }
+.top { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 7mm; border-bottom: 2px solid #0f172a; }
+.brand { margin: 0; font-size: 15pt; font-weight: 700; color: #0f172a; }
+.muted { margin: 1mm 0 0; color: #64748b; line-height: 1.5; }
+.title { text-align: right; }
+h1 { margin: 0; font-size: 24pt; letter-spacing: -0.01em; }
+.status { display: inline-block; margin: 2mm 0 0; padding: 1mm 2.5mm; border-radius: 1mm; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.status.paid { background: #dcfce7; color: #166534; }
+.status.partial { background: #fef3c7; color: #92400e; }
+.parties { display: flex; justify-content: space-between; margin: 8mm 0; }
+h2 { margin: 0 0 1.5mm; font-size: 7.5pt; letter-spacing: 0.08em; text-transform: uppercase; color: #64748b; }
+.parties p { margin: 0; line-height: 1.5; }
+dl { margin: 0; }
+dl div { display: flex; justify-content: space-between; gap: 10mm; padding: 0.6mm 0; }
+dt { color: #64748b; }
+dd { margin: 0; font-weight: 600; }
+table { border-collapse: collapse; }
+.lines { width: 100%; }
+.lines th { padding: 2mm 1.5mm; border-bottom: 1.5px solid #0f172a; text-align: left; font-size: 7.5pt; letter-spacing: 0.05em; text-transform: uppercase; color: #64748b; }
+.lines td { padding: 2.4mm 1.5mm; border-bottom: 1px solid #e2e8f0; }
+.num { text-align: right !important; white-space: nowrap; }
+.taxed { display: inline-block; padding: 0 1mm; border: 1px solid #94a3b8; border-radius: 0.8mm; font-size: 6.5pt; color: #475569; }
+.summary { display: flex; justify-content: space-between; align-items: flex-start; gap: 10mm; margin-top: 6mm; break-inside: avoid; }
+.pay { display: flex; align-items: center; gap: 4mm; }
+.pay img { width: 25mm; height: 25mm; }
+.pay p { margin: 0; font-size: 8pt; line-height: 1.5; color: #475569; }
+.totals { width: 88mm; }
+.totals td { padding: 1.3mm 1.5mm; }
+.totals .total td { border-top: 1.5px solid #0f172a; font-weight: 700; }
+.totals .due td { border-top: 1px solid #cbd5e1; font-size: 12pt; font-weight: 700; color: #0f172a; }
+.notes { margin-top: 10mm; font-size: 8pt; color: #64748b; }

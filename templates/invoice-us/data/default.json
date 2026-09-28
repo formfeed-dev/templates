@@ -1,0 +1,61 @@
+{
+  "company": {
+    "name": "Fennlor Studio LLC",
+    "street": "100 Example Street, Suite 200",
+    "city": "Exampletown, NY 00000",
+    "email": "billing@fennlor.example",
+    "ein": "00-0000000"
+  },
+  "customer": {
+    "name": "Olvarest Inc.",
+    "contact": "John Doe",
+    "street": "200 Example Avenue",
+    "city": "Exampleville, NY 00000"
+  },
+  "invoice": {
+    "number": "INV-2026-0107",
+    "date": "2026-09-28",
+    "terms_days": 30,
+    "po": "PO-55120",
+    "tax_rate": 7.25,
+    "pay_url": "https://pay.fennlor.example/i/INV-2026-0107",
+    "lines": [
+      {
+        "description": "Template design, fixed fee",
+        "qty": 1,
+        "rate": 4800,
+        "amount": 4800,
+        "taxable": false
+      },
+      {
+        "description": "Implementation, hours",
+        "qty": 32,
+        "rate": 150,
+        "amount": 4800,
+        "taxable": false
+      },
+      {
+        "description": "Thermal label printer",
+        "qty": 2,
+        "rate": 649,
+        "amount": 1298,
+        "taxable": true
+      },
+      {
+        "description": "Label rolls, 4 × 6 in, case of 12",
+        "qty": 3,
+        "rate": 89,
+        "amount": 267,
+        "taxable": true
+      }
+    ],
+    "payments": [
+      {
+        "date": "2026-09-02",
+        "method": "ACH",
+        "amount": 3000
+      }
+    ],
+    "notes": "Please pay by ACH or card through the link above and quote the invoice number. Thank you for your business."
+  }
+}

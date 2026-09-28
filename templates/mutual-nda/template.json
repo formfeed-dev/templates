@@ -1,0 +1,7 @@
+{
+  "name": "Mutual NDA with numbered clauses",
+  "kind": "pdf",
+  "engine": "handlebars",
+  "description": "A two-page agreement with a running header, a footer for initials and page numbers, and clauses numbered by CSS counters, so the optional non-solicitation clause renumbers everything after it. The term is written out with `numToWords`: “two (2) years”.",
+  "tags": []
+}

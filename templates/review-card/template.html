@@ -1,0 +1,12 @@
+<main class="card">
+  <header>
+    <p class="brand">{{brand.name}}</p>
+    <p class="stars" aria-label="{{review.rating}} out of 5">{{#each (range 0 5)}}<span class="{{#if (lt this ../review.rating)}}on{{/if}}">★</span>{{/each}}</p>
+  </header>
+  <blockquote>{{truncate review.quote 240}}</blockquote>
+  <footer>
+    <p class="author">{{review.author}}</p>
+    <p class="muted">{{review.role}}, {{review.company}}</p>
+    <p class="muted">{{review.source}} · {{date review.date "MMMM yyyy"}}</p>
+  </footer>
+</main>

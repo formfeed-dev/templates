@@ -1,0 +1,7 @@
+{
+  "name": "Webinar story, 1080×1920",
+  "kind": "image",
+  "engine": "liquid",
+  "description": "A 9:16 story in Liquid and Tailwind that gives the start time in three cities from one timestamp: `date` takes a time zone as its second argument, so London, Berlin and New York each read their own clock, winter time included.",
+  "tags": []
+}

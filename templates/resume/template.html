@@ -1,0 +1,58 @@
+<main class="cv">
+  <aside>
+    <h1>{{person.name}}</h1>
+    <p class="headline">{{person.headline}}</p>
+
+    <h2>Contact</h2>
+    <ul class="plain">
+      <li>{{person.email}}</li>
+      <li>{{person.phone}}</li>
+      <li>{{person.location}}</li>
+      <li>{{person.web}}</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <ul class="skills">
+      {{#each skills}}
+      <li>
+        <span>{{name}}</span>
+        <span class="dots">{{#each (range 0 5)}}<i class="{{#if (lt this ../level)}}on{{/if}}"></i>{{/each}}</span>
+      </li>
+      {{/each}}
+    </ul>
+
+    <h2>Languages</h2>
+    <ul class="plain">
+      {{#each languages}}
+      <li><strong>{{name}}</strong> · {{level}}</li>
+      {{/each}}
+    </ul>
+  </aside>
+
+  <div class="content">
+    <h2>Profile</h2>
+    <p>{{person.summary}}</p>
+
+    <h2>Experience</h2>
+    {{#each (sortBy experience "start" "desc")}}
+    <article>
+      <h3>{{role}}</h3>
+      <p class="where">{{company}} · {{location}} · {{date start "MMM yyyy"}} – {{#if end}}{{date end "MMM yyyy"}}{{else}}present{{/if}}</p>
+      <ul>
+        {{#each highlights}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <p class="stack">{{join stack " · "}}</p>
+    </article>
+    {{/each}}
+
+    <h2>Education</h2>
+    {{#each (sortBy education "start" "desc")}}
+    <article>
+      <h3>{{degree}}</h3>
+      <p class="where">{{school}} · {{date start "yyyy"}} – {{date end "yyyy"}}</p>
+    </article>
+    {{/each}}
+  </div>
+</main>

@@ -1,0 +1,7 @@
+{
+  "name": "Till receipt on an 80 mm roll",
+  "kind": "pdf",
+  "engine": "liquid",
+  "description": "A receipt for thermal printers whose page is exactly as long as the receipt: the template writes its own `@page` size from the number of items and VAT rates. Prices include VAT, and the VAT analysis per rate is worked out in the template with `where` and `sum`.",
+  "tags": []
+}

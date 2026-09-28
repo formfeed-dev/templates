@@ -1,0 +1,341 @@
+{
+  "report": {
+    "company": "Fennlor Studio Ltd",
+    "title": "Annual report 2025",
+    "subtitle": "Sales, regions and accounts",
+    "year": 2025,
+    "prepared": "2026-03-16",
+    "summary": "Revenue grew in every month of the year. The last quarter carried the growth, with the new pendant range in its first full season, and the United Kingdom stayed the largest region with more than a third of revenue."
+  },
+  "customers": 425,
+  "months": [
+    {
+      "label": "Jan",
+      "revenue": 41250,
+      "previous": 36100,
+      "orders": 296
+    },
+    {
+      "label": "Feb",
+      "revenue": 39800,
+      "previous": 35400,
+      "orders": 281
+    },
+    {
+      "label": "Mar",
+      "revenue": 46120,
+      "previous": 39800,
+      "orders": 327
+    },
+    {
+      "label": "Apr",
+      "revenue": 44300,
+      "previous": 38950,
+      "orders": 314
+    },
+    {
+      "label": "May",
+      "revenue": 47900,
+      "previous": 41200,
+      "orders": 339
+    },
+    {
+      "label": "Jun",
+      "revenue": 49650,
+      "previous": 42700,
+      "orders": 351
+    },
+    {
+      "label": "Jul",
+      "revenue": 45200,
+      "previous": 40100,
+      "orders": 318
+    },
+    {
+      "label": "Aug",
+      "revenue": 42750,
+      "previous": 38300,
+      "orders": 301
+    },
+    {
+      "label": "Sep",
+      "revenue": 51380,
+      "previous": 44900,
+      "orders": 362
+    },
+    {
+      "label": "Oct",
+      "revenue": 54900,
+      "previous": 47300,
+      "orders": 388
+    },
+    {
+      "label": "Nov",
+      "revenue": 61240,
+      "previous": 52800,
+      "orders": 431
+    },
+    {
+      "label": "Dec",
+      "revenue": 66510,
+      "previous": 57450,
+      "orders": 468
+    }
+  ],
+  "regions": [
+    {
+      "name": "Germany",
+      "customers": 96,
+      "orders": 941,
+      "revenue": 131950
+    },
+    {
+      "name": "France",
+      "customers": 47,
+      "orders": 455,
+      "revenue": 64120
+    },
+    {
+      "name": "United Kingdom",
+      "customers": 148,
+      "orders": 1512,
+      "revenue": 214300
+    },
+    {
+      "name": "Nordics",
+      "customers": 39,
+      "orders": 412,
+      "revenue": 58370
+    },
+    {
+      "name": "Netherlands",
+      "customers": 51,
+      "orders": 509,
+      "revenue": 72480
+    },
+    {
+      "name": "Rest of Europe",
+      "customers": 44,
+      "orders": 347,
+      "revenue": 49780
+    }
+  ],
+  "accounts": [
+    {
+      "account": "A-1003",
+      "region": "United Kingdom",
+      "orders": 61,
+      "revenue": 28400
+    },
+    {
+      "account": "A-1007",
+      "region": "Germany",
+      "orders": 49,
+      "revenue": 21300
+    },
+    {
+      "account": "A-1011",
+      "region": "United Kingdom",
+      "orders": 55,
+      "revenue": 24150
+    },
+    {
+      "account": "A-1012",
+      "region": "Netherlands",
+      "orders": 33,
+      "revenue": 14800
+    },
+    {
+      "account": "A-1015",
+      "region": "France",
+      "orders": 29,
+      "revenue": 12900
+    },
+    {
+      "account": "A-1018",
+      "region": "Nordics",
+      "orders": 31,
+      "revenue": 13600
+    },
+    {
+      "account": "A-1021",
+      "region": "Germany",
+      "orders": 41,
+      "revenue": 17650
+    },
+    {
+      "account": "A-1024",
+      "region": "United Kingdom",
+      "orders": 47,
+      "revenue": 19800
+    },
+    {
+      "account": "A-1026",
+      "region": "Rest of Europe",
+      "orders": 22,
+      "revenue": 9800
+    },
+    {
+      "account": "A-1030",
+      "region": "Germany",
+      "orders": 34,
+      "revenue": 15200
+    },
+    {
+      "account": "A-1033",
+      "region": "United Kingdom",
+      "orders": 38,
+      "revenue": 16920
+    },
+    {
+      "account": "A-1036",
+      "region": "Netherlands",
+      "orders": 27,
+      "revenue": 11900
+    },
+    {
+      "account": "A-1039",
+      "region": "France",
+      "orders": 24,
+      "revenue": 10400
+    },
+    {
+      "account": "A-1041",
+      "region": "United Kingdom",
+      "orders": 33,
+      "revenue": 14300
+    },
+    {
+      "account": "A-1044",
+      "region": "Nordics",
+      "orders": 25,
+      "revenue": 10900
+    },
+    {
+      "account": "A-1046",
+      "region": "Germany",
+      "orders": 28,
+      "revenue": 12400
+    },
+    {
+      "account": "A-1049",
+      "region": "United Kingdom",
+      "orders": 29,
+      "revenue": 12650
+    },
+    {
+      "account": "A-1052",
+      "region": "Netherlands",
+      "orders": 22,
+      "revenue": 9650
+    },
+    {
+      "account": "A-1055",
+      "region": "Rest of Europe",
+      "orders": 17,
+      "revenue": 7300
+    },
+    {
+      "account": "A-1057",
+      "region": "Germany",
+      "orders": 23,
+      "revenue": 10150
+    },
+    {
+      "account": "A-1060",
+      "region": "United Kingdom",
+      "orders": 26,
+      "revenue": 11200
+    },
+    {
+      "account": "A-1062",
+      "region": "France",
+      "orders": 20,
+      "revenue": 8800
+    },
+    {
+      "account": "A-1065",
+      "region": "Nordics",
+      "orders": 19,
+      "revenue": 8200
+    },
+    {
+      "account": "A-1068",
+      "region": "United Kingdom",
+      "orders": 22,
+      "revenue": 9850
+    },
+    {
+      "account": "A-1070",
+      "region": "Germany",
+      "orders": 20,
+      "revenue": 8900
+    },
+    {
+      "account": "A-1073",
+      "region": "Netherlands",
+      "orders": 18,
+      "revenue": 8100
+    },
+    {
+      "account": "A-1075",
+      "region": "United Kingdom",
+      "orders": 19,
+      "revenue": 8400
+    },
+    {
+      "account": "A-1078",
+      "region": "France",
+      "orders": 15,
+      "revenue": 6700
+    },
+    {
+      "account": "A-1080",
+      "region": "Germany",
+      "orders": 17,
+      "revenue": 7400
+    },
+    {
+      "account": "A-1083",
+      "region": "Rest of Europe",
+      "orders": 13,
+      "revenue": 5900
+    },
+    {
+      "account": "A-1085",
+      "region": "United Kingdom",
+      "orders": 16,
+      "revenue": 7120
+    },
+    {
+      "account": "A-1088",
+      "region": "Nordics",
+      "orders": 15,
+      "revenue": 6400
+    },
+    {
+      "account": "A-1090",
+      "region": "Netherlands",
+      "orders": 14,
+      "revenue": 6300
+    },
+    {
+      "account": "A-1093",
+      "region": "Germany",
+      "orders": 14,
+      "revenue": 6150
+    },
+    {
+      "account": "A-1095",
+      "region": "France",
+      "orders": 12,
+      "revenue": 5500
+    },
+    {
+      "account": "A-1098",
+      "region": "Netherlands",
+      "orders": 12,
+      "revenue": 5200
+    }
+  ]
+}

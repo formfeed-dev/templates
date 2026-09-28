@@ -1,0 +1,38 @@
+<header>
+  <div>
+    <p class="brand">{{ company.name }}</p>
+    <h1>{{ list.title }}</h1>
+    <p class="muted">{{ list.season }} · {{ products | size }} products</p>
+  </div>
+  <p class="contact">{{ company.street }}<br>{{ company.city }}<br>{{ company.email }}</p>
+</header>
+
+{% assign categories = products | groupBy: 'category' %}
+{% for category in categories %}
+{% assign lowest = category.items | min: 'price' %}
+{% assign highest = category.items | max: 'price' %}
+{% assign sorted = category.items | sortBy: 'name' %}
+<section class="category">
+  <h2>{{ category.key }} <span>{{ category.items | length }} products · {{ lowest | money }} to {{ highest | money }}</span></h2>
+  <table>
+    <thead><tr><th>Item</th><th>EAN</th><th class="num">Pack</th><th class="num">Unit</th><th class="num">Per pack</th></tr></thead>
+    <tbody>
+      {% for product in sorted %}
+      <tr>
+        <td><strong>{{ product.name }}</strong><br><span class="muted">{{ product.sku }}</span></td>
+        <td><img class="ean" src="{{ product.ean | barcode: type: 'ean13', height: 7 }}" alt="EAN {{ product.ean }}"></td>
+        <td class="num">{{ product.pack }}</td>
+        <td class="num">{{ product.price | money }}</td>
+        <td class="num">{{ product.price | multiply: product.pack | money }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endfor %}
+
+<ul class="terms">
+  {% for term in list.terms %}
+  <li>{{ term }}</li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,112 @@
+{
+  "person": {
+    "name": "Jane Doe",
+    "headline": "Senior backend engineer",
+    "email": "jane@doe.example",
+    "phone": "+44 0000 000000",
+    "location": "Exampletown, United Kingdom",
+    "web": "janedoe.example",
+    "summary": "Backend engineer with ten years of building order, billing and document systems. I like boring infrastructure, small pull requests and documents that come out the same on every run."
+  },
+  "experience": [
+    {
+      "role": "Software engineer",
+      "company": "Fennlor Studio GmbH",
+      "location": "Musterstadt, Germany",
+      "start": "2017-09-01",
+      "end": "2021-02-28",
+      "highlights": [
+        "Built the order and invoicing service that replaced a nightly spreadsheet export.",
+        "Introduced contract tests between the shop and the warehouse system."
+      ],
+      "stack": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "role": "Senior backend engineer",
+      "company": "Olvarest Ltd",
+      "location": "Exampletown",
+      "start": "2021-03-01",
+      "end": null,
+      "highlights": [
+        "Lead the billing platform team of five, from usage metering to the monthly invoice run.",
+        "Moved invoice and contract PDFs from a home-grown renderer to templates in Git with snapshot tests.",
+        "Cut the month-end batch from six hours to forty minutes."
+      ],
+      "stack": [
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Kubernetes"
+      ]
+    },
+    {
+      "role": "Junior developer",
+      "company": "Olvarest GmbH",
+      "location": "Beispielstadt, Germany",
+      "start": "2016-10-01",
+      "end": "2017-08-31",
+      "highlights": [
+        "Maintained the customer portal and its reporting exports."
+      ],
+      "stack": [
+        "PHP",
+        "MySQL"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BSc Computer Science",
+      "school": "University of Exampletown",
+      "start": "2012-10-01",
+      "end": "2015-07-31"
+    },
+    {
+      "degree": "MSc Software Engineering",
+      "school": "University of Exampletown",
+      "start": "2015-10-01",
+      "end": "2016-09-30"
+    }
+  ],
+  "skills": [
+    {
+      "name": "TypeScript",
+      "level": 5
+    },
+    {
+      "name": "PostgreSQL",
+      "level": 5
+    },
+    {
+      "name": "Python",
+      "level": 4
+    },
+    {
+      "name": "Kubernetes",
+      "level": 3
+    },
+    {
+      "name": "Go",
+      "level": 2
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "native"
+    },
+    {
+      "name": "German",
+      "level": "fluent (C1)"
+    },
+    {
+      "name": "French",
+      "level": "basic (A2)"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+body { margin: 0; font-family: 'Inter', sans-serif; font-size: 9pt; line-height: 1.5; color: #1e293b; }
+.cv { display: grid; grid-template-columns: 68mm 1fr; min-height: 297mm; }
+aside { padding: 16mm 9mm; background: #1e1b4b; color: #e0e7ff; }
+aside h1 { margin: 0; font-size: 22pt; line-height: 1.1; color: #fff; }
+.headline { margin: 2mm 0 0; font-size: 10.5pt; color: #a5b4fc; }
+aside h2 { margin: 10mm 0 3mm; font-size: 7.5pt; letter-spacing: 0.12em; text-transform: uppercase; color: #a5b4fc; }
+ul { margin: 0; padding: 0; list-style: none; }
+.plain li { margin-bottom: 1.2mm; overflow-wrap: anywhere; }
+.skills li { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.6mm; }
+.dots { display: flex; gap: 1.2mm; }
+.dots i { width: 2.4mm; height: 2.4mm; border-radius: 50%; background: #3730a3; }
+.dots i.on { background: #a5b4fc; }
+.content { padding: 16mm 14mm 16mm 12mm; }
+.content h2 { margin: 0 0 3mm; padding-bottom: 1.5mm; border-bottom: 1px solid #e2e8f0; font-size: 8pt; letter-spacing: 0.12em; text-transform: uppercase; color: #4f46e5; }
+.content > p { margin: 0 0 8mm; }
+article { margin-bottom: 6mm; break-inside: avoid; }
+h3 { margin: 0; font-size: 10.5pt; color: #0f172a; }
+.where { margin: 0.5mm 0 1.5mm; color: #64748b; }
+article ul { padding-left: 4mm; list-style: disc; }
+article li { margin-bottom: 0.8mm; }
+.stack { margin: 1.5mm 0 0; font-size: 8pt; color: #4f46e5; }

@@ -1,0 +1,7 @@
+{
+  "name": "Résumé with a sidebar and skill ratings",
+  "kind": "pdf",
+  "engine": "handlebars",
+  "description": "A one-page CV in two columns, full bleed. The template sorts the positions by start date, so the data can arrive in any order, writes “present” for a job without an end date, and draws each skill rating as five dots with `range` and `lt`.",
+  "tags": []
+}

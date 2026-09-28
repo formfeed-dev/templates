@@ -1,0 +1,26 @@
+{
+  "paper": {
+    "format": "A4"
+  },
+  "margin": {
+    "top": "20mm",
+    "right": "18mm",
+    "bottom": "22mm",
+    "left": "18mm"
+  },
+  "footer": {
+    "height": "12mm",
+    "padding": "0 18mm"
+  },
+  "pdf": {
+    "metadata": {
+      "title": "{{ report.title }} · {{ report.company }}",
+      "author": "{{ report.company }}"
+    },
+    "tagged": true,
+    "outline": true
+  },
+  "locale": "en-GB",
+  "timezone": "Europe/London",
+  "currency": "GBP"
+}
