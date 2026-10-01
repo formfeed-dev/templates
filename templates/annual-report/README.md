@@ -30,6 +30,7 @@ A four-page report: a cover with a linked table of contents, KPI cards, a line c
 
 ## Use it
 
+- **Open it in a workspace.** [Use this template](https://app.formfeed.dev/en/examples/annual-report?utm_source=github-templates&utm_content=annual-report) puts a copy into your Formfeed workspace, published and ready for the API. A free account is enough, and it needs no CLI.
 - **Copy it.** It is plain HTML and CSS with Jinja2 tags. The helpers (`sum`, `sortBy`, `first`, `groupBy`, `length`, `pluck`, `chart`, `round`, `number`, `money`, `date`) are Formfeed's; the [helper reference](https://docs.formfeed.dev/templates/helpers) says what each does.
 - **Push it into a Formfeed workspace** from the root of this repository, where `formfeed.json` is: `npx formfeed login`, then `npx formfeed templates push annual-report`. Open it in the editor to change it with a live preview.
 - **Render it** from your code with the [API](https://docs.formfeed.dev/api/overview) and your own data, or try it first with `npx formfeed render annual-report`: renders with a test key are free.

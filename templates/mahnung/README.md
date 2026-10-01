@@ -30,6 +30,7 @@ A dunning letter in Handlebars: the wording changes with the final notice, open 
 
 ## Use it
 
+- **Open it in a workspace.** [Use this template](https://app.formfeed.dev/en/examples/mahnung?utm_source=github-templates&utm_content=mahnung) puts a copy into your Formfeed workspace, published and ready for the API. A free account is enough, and it needs no CLI.
 - **Copy it.** It is plain HTML and CSS with Handlebars tags. The helpers (`money`, `date`, `dateAdd`, `sum`, `add`, `epcQr`) are Formfeed's; the [helper reference](https://docs.formfeed.dev/templates/helpers) says what each does.
 - **Push it into a Formfeed workspace** from the root of this repository, where `formfeed.json` is: `npx formfeed login`, then `npx formfeed templates push mahnung`. Open it in the editor to change it with a live preview.
 - **Render it** from your code with the [API](https://docs.formfeed.dev/api/overview) and your own data, or try it first with `npx formfeed render mahnung`: renders with a test key are free.

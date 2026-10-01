@@ -28,6 +28,7 @@ A custom paper size for thermal printers, a Code 128 tracking barcode, a QR code
 
 ## Use it
 
+- **Open it in a workspace.** [Use this template](https://app.formfeed.dev/en/examples/shipping-label?utm_source=github-templates&utm_content=shipping-label) puts a copy into your Formfeed workspace, published and ready for the API. A free account is enough, and it needs no CLI.
 - **Copy it.** It is plain HTML and CSS with Jinja2 tags. The helpers (`barcode`, `qrcode`, `number`, `sum`, `upper`) are Formfeed's; the [helper reference](https://docs.formfeed.dev/templates/helpers) says what each does.
 - **Push it into a Formfeed workspace** from the root of this repository, where `formfeed.json` is: `npx formfeed login`, then `npx formfeed templates push shipping-label`. Open it in the editor to change it with a live preview.
 - **Render it** from your code with the [API](https://docs.formfeed.dev/api/overview) and your own data, or try it first with `npx formfeed render shipping-label`: renders with a test key are free.

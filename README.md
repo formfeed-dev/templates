@@ -11,6 +11,10 @@ API call in eight languages.
 
 ## Use a template
 
+Every template's README has a **Use this template** link: it opens the template in Formfeed, where
+one click puts a copy into your workspace, published and ready for the API. A free account is
+enough. Or take the files:
+
 1. **Copy it.** A folder under `templates/` holds `template.html`, its stylesheet and settings, and
    `data/default.json`. The tags are ordinary Jinja2, Liquid or Handlebars; the helpers they call
    (money, dates, QR codes and GiroCodes, barcodes, charts) are described in the

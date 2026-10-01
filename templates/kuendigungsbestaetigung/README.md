@@ -29,6 +29,7 @@ A plain business letter whose paragraphs depend on the data: with a refund it na
 
 ## Use it
 
+- **Open it in a workspace.** [Use this template](https://app.formfeed.dev/en/examples/kuendigungsbestaetigung?utm_source=github-templates&utm_content=kuendigungsbestaetigung) puts a copy into your Formfeed workspace, published and ready for the API. A free account is enough, and it needs no CLI.
 - **Copy it.** It is plain HTML and CSS with Handlebars tags. The helpers (`date`, `money`) are Formfeed's; the [helper reference](https://docs.formfeed.dev/templates/helpers) says what each does.
 - **Push it into a Formfeed workspace** from the root of this repository, where `formfeed.json` is: `npx formfeed login`, then `npx formfeed templates push kuendigungsbestaetigung`. Open it in the editor to change it with a live preview.
 - **Render it** from your code with the [API](https://docs.formfeed.dev/api/overview) and your own data, or try it first with `npx formfeed render kuendigungsbestaetigung`: renders with a test key are free.
