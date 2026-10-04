@@ -1,0 +1,7 @@
+{
+  "name": "E-invoice: ZUGFeRD and Factur-X from one template",
+  "kind": "pdf",
+  "engine": "jinja2",
+  "description": "A German invoice whose data is one `_invoice` block. The template prints the block, and the same block becomes the XML inside the PDF: a ZUGFeRD / Factur-X invoice, a PDF/A-3 that carries `factur-x.xml`, validated against the rules of EN 16931 before it is delivered.",
+  "tags": []
+}

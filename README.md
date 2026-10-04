@@ -5,7 +5,7 @@ notes, certificates, payslips, timesheets, tickets, name badges, vouchers, repor
 shipping labels. Each is plain HTML and CSS with Jinja2, Liquid or Handlebars tags, together with the
 sample data it was designed with and the PDF or image it renders to.
 
-30 templates and 20 building blocks. Every template renders on
+31 templates and 20 building blocks. Every template renders on
 [Formfeed](https://formfeed.dev/?utm_source=github-templates), where each has its own page with the
 API call in eight languages.
 
@@ -42,6 +42,7 @@ enough. Or take the files:
 | | Template | |
 | --- | --- | --- |
 | <img src="templates/invoice-de/preview.webp" width="140" alt=""> | **[German invoice with GiroCode](templates/invoice-de)**<br>Line items, net, VAT and gross computed in the template, dates in German format with a due date 14 days out, a SEPA QR code banking apps scan, and a running footer with page numbers. Your code sends the facts; the template owns the legal layout. | Jinja2 · PDF |
+| <img src="templates/e-rechnung/preview.webp" width="140" alt=""> | **[E-invoice: ZUGFeRD and Factur-X from one template](templates/e-rechnung)**<br>A German invoice whose data is one `_invoice` block. The template prints the block, and the same block becomes the XML inside the PDF: a ZUGFeRD / Factur-X invoice, a PDF/A-3 that carries `factur-x.xml`, validated against the rules of EN 16931 before it is delivered. | Jinja2 · PDF |
 | <img src="templates/invoice-us/preview.webp" width="140" alt=""> | **[US invoice with sales tax](templates/invoice-us)**<br>Letter paper, dollars and US dates from the template’s `en-US` locale. Sales tax applies only to the lines marked taxable, a deposit reduces the balance, the status badge and the pay-online QR code follow from what is left to pay. | Jinja2 · PDF |
 | <img src="templates/receipt/preview.webp" width="140" alt=""> | **[Till receipt on an 80 mm roll](templates/receipt)**<br>A receipt for thermal printers whose page is exactly as long as the receipt: the template writes its own `@page` size from the number of items and VAT rates. Prices include VAT, and the VAT analysis per rate is worked out in the template with `where` and `sum`. | Liquid · PDF |
 | <img src="templates/angebot/preview.webp" width="140" alt=""> | **[German quote (Angebot) with optional items](templates/angebot)**<br>A quote in the German letter layout: optional positions are listed but stay out of the sum, the discount and VAT are computed in the template, and the validity date follows from the quote date. The footer carries the company details German law expects on business letters. | Jinja2 · PDF |

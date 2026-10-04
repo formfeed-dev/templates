@@ -1,0 +1,21 @@
+{
+  "paper": {
+    "format": "A4"
+  },
+  "margin": {
+    "top": "20mm",
+    "right": "18mm",
+    "bottom": "24mm",
+    "left": "18mm"
+  },
+  "footer": {
+    "height": "14mm"
+  },
+  "locale": "de-DE",
+  "timezone": "Europe/Berlin",
+  "currency": "EUR",
+  "einvoice": {
+    "profile": "en16931",
+    "flavour": "zugferd"
+  }
+}
