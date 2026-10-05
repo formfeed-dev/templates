@@ -16,7 +16,7 @@ A German invoice whose data is one `_invoice` block. The template prints the blo
 - Units and VAT categories are codes in the data (`HUR`, `S`), as the standard wants them; the template turns `HUR` into `Std.` for the reader, and `money` prints `3.760,40 €` from `3760.4`.
 - Before the file is delivered, the XML is held to the rules of EN 16931 and the PDF to PDF/A-3b, and the render answers with the report in `einvoice.validation`. A total that does not add up fails the request with `einvoice_data_invalid` and names the rule it breaks.
 - The text of the finished PDF is then compared with the XML: a number or total the page does not show is listed in `einvoice.display.missing`, because the XML is the invoice and the page must not say something else.
-- E-invoices are part of the Starter plan and above and add one unit to the render; on the Free plan the request is answered with `403`. Formfeed creates and validates the file; sending and archiving it stay with you.
+- E-invoices are part of the Starter plan and above and add one unit to the render. On the Free plan, test renders make up to 20 e-invoices a day, each with the test mark on its pages; a live request is answered with `403`. Formfeed creates and validates the file; sending and archiving it stay with you.
 
 ## Files
 
