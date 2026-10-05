@@ -9,9 +9,9 @@
 </address>
 
 <table class="facts">
-  <tr><td>Rechnungsnummer</td><td>{{ inv.number }}</td></tr>
-  <tr><td>Rechnungsdatum</td><td>{{ inv.issue_date | date('dd.MM.yyyy') }}</td></tr>
-  <tr><td>Leistungsdatum</td><td>{{ inv.delivery.date | date('dd.MM.yyyy') }}</td></tr>
+  <tr><th scope="row">Rechnungsnummer</th><td>{{ inv.number }}</td></tr>
+  <tr><th scope="row">Rechnungsdatum</th><td>{{ inv.issue_date | date('dd.MM.yyyy') }}</td></tr>
+  <tr><th scope="row">Leistungsdatum</th><td>{{ inv.delivery.date | date('dd.MM.yyyy') }}</td></tr>
 </table>
 
 <h1>Rechnung {{ inv.number }}</h1>
@@ -35,11 +35,11 @@
 </table>
 
 <table class="totals">
-  <tr><td>Netto</td><td class="num">{{ inv.totals.tax_basis | money }}</td></tr>
+  <tr><th scope="row">Netto</th><td class="num">{{ inv.totals.tax_basis | money }}</td></tr>
   {% for tax in inv.tax.breakdown %}
-  <tr><td>USt. {{ tax.rate }} %</td><td class="num">{{ tax.amount | money }}</td></tr>
+  <tr><th scope="row">USt. {{ tax.rate }} %</th><td class="num">{{ tax.amount | money }}</td></tr>
   {% endfor %}
-  <tr class="grand"><td>Rechnungsbetrag</td><td class="num">{{ inv.totals.grand | money }}</td></tr>
+  <tr class="grand"><th scope="row">Rechnungsbetrag</th><td class="num">{{ inv.totals.grand | money }}</td></tr>
 </table>
 
 <p class="pay">

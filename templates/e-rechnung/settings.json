@@ -1,5 +1,6 @@
 {
   "pdf": {
+    "ua": true,
     "metadata": {
       "title": "Rechnung {{ _invoice.number }}"
     }

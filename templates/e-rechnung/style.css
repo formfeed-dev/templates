@@ -29,4 +29,8 @@ table.lines { width: 100%; margin-top: 6mm; border-collapse: collapse; }
 .totals td { padding: 1.2mm 1.5mm; }
 .totals .grand td { border-top: 1.5px solid #1e293b; font-weight: 700; font-size: 11pt; }
 .muted { color: #64748b; }
+.facts th, .totals th { font-weight: 400; text-align: left; }
+.facts th { padding: 0.4mm 0 0.4mm 5mm; }
+.totals th { padding: 1.2mm 1.5mm; }
+.totals .grand th { border-top: 1.5px solid #1e293b; font-weight: 700; font-size: 11pt; }
 .pay { margin-top: 12mm; }
