@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "{{ list.title }}"
+    }
+  },
   "paper": {
     "format": "A4"
   },

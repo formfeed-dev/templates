@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "Payslip"
+    }
+  },
   "paper": {
     "format": "A4"
   },

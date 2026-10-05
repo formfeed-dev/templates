@@ -41,7 +41,8 @@
     ],
     options: { devicePixelRatio: 3 },
     width: 640,
-    height: 260
+    height: 260,
+    alt: 'Line chart of the revenue by month, ' ~ report.year ~ ' against ' ~ (report.year - 1)
   }) }}
 </section>
 
@@ -62,7 +63,7 @@
       {% endfor %}
     </tbody>
     <tbody class="total">
-      <tr><td>Total</td><td class="num">{{ regions | sum('customers') }}</td><td class="num">{{ regions | sum('orders') | number(0) }}</td><td class="num">£{{ regions | sum('revenue') | number(0) }}</td><td></td></tr>
+      <tr><td>Total</td><td class="num">{{ regions | sum('customers') }}</td><td class="num">{{ regions | sum('orders') | number(0) }}</td><td class="num">£{{ regions | sum('revenue') | number(0) }}</td><td class="share">100%</td></tr>
     </tbody>
   </table>
 </section>
@@ -82,11 +83,11 @@
         <td class="num">{{ (account.revenue / account.orders) | money }}</td>
       </tr>
       {% endfor %}
-      <tr class="subtotal"><td>{{ group.items | length }} accounts</td><td class="num">{{ group.items | sum('orders') }}</td><td class="num">£{{ group.items | sum('revenue') | number(0) }}</td><td></td></tr>
+      <tr class="subtotal"><td>{{ group.items | length }} accounts</td><td class="num">{{ group.items | sum('orders') }}</td><td class="num">£{{ group.items | sum('revenue') | number(0) }}</td><td class="num">{{ ((group.items | sum('revenue')) / (group.items | sum('orders'))) | money }}</td></tr>
     </tbody>
     {% endfor %}
     <tbody class="total">
-      <tr><td>All {{ accounts | length }} accounts</td><td class="num">{{ accounts | sum('orders') | number(0) }}</td><td class="num">£{{ accounts | sum('revenue') | number(0) }}</td><td></td></tr>
+      <tr><td>All {{ accounts | length }} accounts</td><td class="num">{{ accounts | sum('orders') | number(0) }}</td><td class="num">£{{ accounts | sum('revenue') | number(0) }}</td><td class="num">{{ ((accounts | sum('revenue')) / (accounts | sum('orders'))) | money }}</td></tr>
     </tbody>
   </table>
 </section>

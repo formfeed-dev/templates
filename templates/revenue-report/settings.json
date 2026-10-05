@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "{{ report.title }}"
+    }
+  },
   "paper": {
     "format": "A4"
   },

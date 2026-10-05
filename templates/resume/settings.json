@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "{{person.name}}"
+    }
+  },
   "paper": {
     "format": "A4"
   },

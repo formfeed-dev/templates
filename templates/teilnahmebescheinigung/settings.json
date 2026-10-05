@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "Teilnahmebescheinigung {{participant.name}}"
+    }
+  },
   "paper": {
     "format": "A4"
   },

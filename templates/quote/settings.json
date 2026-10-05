@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "Quote {{ quote.number }}"
+    }
+  },
   "paper": {
     "format": "A4"
   },

@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "Gutschein"
+    }
+  },
   "paper": {
     "width": "210mm",
     "height": "99mm"

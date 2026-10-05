@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "Receipt · {{ shop.name }}"
+    }
+  },
   "paper": {
     "width": "80mm",
     "height": "200mm"

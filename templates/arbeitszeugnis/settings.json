@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "{{ reference.kind }}"
+    }
+  },
   "paper": {
     "format": "A4"
   },

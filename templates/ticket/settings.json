@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "{{ event.title }}"
+    }
+  },
   "paper": {
     "width": "210mm",
     "height": "80mm"

@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "Shipping label"
+    }
+  },
   "paper": {
     "width": "100mm",
     "height": "150mm"

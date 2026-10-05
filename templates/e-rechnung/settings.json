@@ -1,4 +1,9 @@
 {
+  "pdf": {
+    "metadata": {
+      "title": "Rechnung {{ _invoice.number }}"
+    }
+  },
   "paper": {
     "format": "A4"
   },
