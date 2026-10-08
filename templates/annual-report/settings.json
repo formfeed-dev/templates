@@ -15,7 +15,7 @@
   "pdf": {
     "metadata": {
       "title": "{{ report.title }} · {{ report.company }}",
-      "author": "{{ report.company }}"
+      "author": "Fennlor Studio Ltd"
     },
     "tagged": true,
     "outline": true

@@ -13,8 +13,8 @@ A 1200×630 social image in Liquid with Tailwind classes, compiled at render tim
 - The settings fix the canvas: `image` with 1200×630 pixels, PNG and a device scale factor of 1, which is what social networks expect.
 - `tailwind: true` compiles the classes the markup uses at render time; there is no stylesheet to maintain.
 - `truncate: 70` keeps a long headline inside the card, `default: "Blog"` fills a missing category, and `image` crops the avatar with `fit: "cover"`.
-- `access: "public"` returns a CDN URL you can put straight into `<meta property="og:image">`.
-- An identical request is answered from the deduplication cache and costs no units, so rendering on every deploy is fine.
+- `access: "public"` returns a CDN URL without a signature, which fits `<meta property="og:image">` for as long as the file is kept; the retention of your plan decides how long that is.
+- An identical request within 24 hours is answered from the deduplication cache and costs no units, so a second deploy on the same day renders nothing again.
 
 ## Files
 
