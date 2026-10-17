@@ -14,7 +14,7 @@ Two post-processing steps in one request: a red CONFIDENTIAL mark on every page,
 - `password.user` opens the document, and `permissions: ["print"]` allows printing while copying and editing stay locked. The example file opens with `formfeed`; in production it is the employee’s own password.
 - The password never reaches the render log.
 - Handlebars nests helpers in brackets: `{{money (sum earnings "amount")}}` adds the earnings and formats the result.
-- One unit for the page plus half a unit per post-processing step.
+- With a live key, one unit for the PDF (up to five pages) plus half a unit per post-processing step: two units for this request. Post-processing is part of the Starter plan and above.
 
 The rendered example carries the watermark and the password from the request's `post` block ([PDF post-processing](https://docs.formfeed.dev/api/pdf-tools), Starter plan and above), not from the template.
 

@@ -13,7 +13,7 @@ A plain business letter whose paragraphs depend on the data: with a refund it na
 - `{{#if contract.refund}} … {{else}} … {{/if}}` chooses between the refund paragraph and the sentence that nothing is open; the same template serves both cases.
 - The data export paragraph sits in its own `{{#if contract.export_until}}` and disappears when the contract has no such deadline.
 - `{{date contract.ends "d. MMMM yyyy"}}` writes `31. Dezember 2026`; the table at the top uses the short `dd.MM.yyyy` form.
-- Letter layout, address window and the legal footer are shared with the other German letters through one `style.css`.
+- Letter layout, address window and legal footer are the ones of the other German letters: the same rules at the top of `style.css` and the same footer, in this template’s own folder.
 
 ## Files
 

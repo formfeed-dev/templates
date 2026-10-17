@@ -11,12 +11,12 @@ A German invoice whose data is one `_invoice` block. The template prints the blo
 ## What this shows
 
 - `settings.json` declares `einvoice` with the profile `en16931`, so every render of this template is an e-invoice: a PDF/A-3 with the invoice attached as `factur-x.xml`. The request is the one of any other template.
-- `settings.json` also declares `pdf.ua`, so the same file is a PDF/UA-1 document: tagged, repaired, and held to the machine-checkable rules of PDF/UA-1 after it became the PDF/A-3. The render carries that verdict as `accessibility` beside `einvoice`, and the two small tables use `th scope="row"`, which is what makes them tables for a screen reader.
+- `settings.json` also declares `pdf.ua`, so the same file is a PDF/UA-1 document: tagged, repaired, and held by veraPDF to the machine-checkable rules of PDF/UA-1 after it became the PDF/A-3. `true` means strict: a file that fails those rules is not delivered. The render carries the verdict as `accessibility` beside `einvoice`, and the two small tables use `th scope="row"`, without which Chromium does not tag them as tables.
 - The data is one `_invoice` block and the template prints from it: number, parties, lines, the VAT breakdown and the totals are stated once and end up on the page and in the XML.
 - Units and VAT categories are codes in the data (`HUR`, `S`), as the standard wants them; the template turns `HUR` into `Std.` for the reader, and `money` prints `3.760,40 €` from `3760.4`.
 - Before the file is delivered, the XML is held to the rules of EN 16931 and the PDF to PDF/A-3b, and the render answers with the report in `einvoice.validation`. A total that does not add up fails the request with `einvoice_data_invalid` and names the rule it breaks.
 - The text of the finished PDF is then compared with the XML: a number or total the page does not show is listed in `einvoice.display.missing`, because the XML is the invoice and the page must not say something else.
-- E-invoices are part of the Starter plan and above and add one unit to the render. On the Free plan, test renders make up to 20 e-invoices a day, each with the test mark on its pages; a live request is answered with `403`. On the paid plans test e-invoices carry the mark too and are counted per day. Formfeed creates and validates the file; sending and archiving it stay with you.
+- Live e-invoices are part of the Starter plan and above and add one unit to the render. On the Free plan, test renders make up to 20 e-invoices a day, each with the test mark on its pages; a live request is answered with `403`. On the paid plans test e-invoices carry the mark too and are counted per day: 100 on Starter, 500 on Pro, 2,000 on Business. Formfeed creates and validates the file; sending it, archiving it and its VAT treatment stay with you.
 
 ## Files
 

@@ -14,7 +14,7 @@ A receipt for a monetary donation laid out after the wording of the official Ger
 - The yes/no boxes for the waiver of reimbursement are one Liquid `{% if donation.waiver %}`.
 - Tax office, tax number, date and period of the exemption notice come from the data, so one template serves several organisations.
 - The year’s receipts are one batch: an item per donation, a zip at the end.
-- The wording follows the official sample for monetary donations to corporations; it is an example of the mechanics, not tax advice.
+- The wording is modelled on the official sample for monetary donations to corporations; it shows the mechanics and is no tax advice, so have your tax adviser check it for your organisation.
 
 ## Files
 

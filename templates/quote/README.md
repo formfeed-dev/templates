@@ -14,7 +14,7 @@ The template knows nothing about the mark: `post.watermark` stamps DRAFT across 
 - The text is sized to the page diagonal and runs from bottom left to top right; `color`, `opacity` and `rotation` change that.
 - Liquid passes helper arguments after a colon: `dateAdd: 30, "days"` sets the validity, and `money` prints pounds because the template’s currency is `GBP`.
 - A PDF that was rendered earlier is marked through `/pdf/watermark` without rendering it again.
-- A post-processing step costs half a unit on top of the render.
+- Post-processing is part of the Starter plan and above, with a test key too; with a live key each step costs half a unit on top of the render.
 
 The rendered example carries the watermark from the request's `post` block ([PDF post-processing](https://docs.formfeed.dev/api/pdf-tools), Starter plan and above), not from the template.
 

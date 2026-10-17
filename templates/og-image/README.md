@@ -1,6 +1,6 @@
 # Open Graph image with Tailwind
 
-A 1200×630 social image in Liquid with Tailwind classes, compiled at render time. Liquid passes options as keyword arguments (`| image: width: 72`), and identical requests are served from the dedup cache at zero units.
+A 1200×630 social image in Liquid with Tailwind classes, compiled at render time. Liquid passes options as keyword arguments (`| image: width: 72`), and an identical request with a live key within 24 hours is answered with the earlier file at zero units.
 
 ![Open Graph image with Tailwind, as rendered](preview.webp)
 
@@ -14,7 +14,7 @@ A 1200×630 social image in Liquid with Tailwind classes, compiled at render tim
 - `tailwind: true` compiles the classes the markup uses at render time; there is no stylesheet to maintain.
 - `truncate: 70` keeps a long headline inside the card, `default: "Blog"` fills a missing category, and `image` crops the avatar with `fit: "cover"`.
 - `access: "public"` returns a CDN URL without a signature, which fits `<meta property="og:image">` for as long as the file is kept; the retention of your plan decides how long that is.
-- An identical request within 24 hours is answered from the deduplication cache and costs no units, so a second deploy on the same day renders nothing again.
+- With a live key, a request identical to one of the last 24 hours is answered with the earlier image and costs no units, so a second deploy on the same day renders nothing again. Renders with a test key are never deduplicated.
 
 ## Files
 

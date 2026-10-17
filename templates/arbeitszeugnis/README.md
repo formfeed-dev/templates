@@ -10,7 +10,7 @@ A text document rather than a table: the paragraphs arrive as Markdown, `markdow
 
 ## What this shows
 
-- Each entry of `reference.sections` is Markdown; `markdown` renders paragraphs, the task list and the emphasis, so the text can come straight from an HR tool.
+- Each entry of `reference.sections` is Markdown; `markdown` renders paragraphs, the list of duties and the emphasis, so the text can come straight from an HR tool.
 - `date: "d. MMMM yyyy"` with the locale `de-DE` writes `12. April 1990` and `30. September 2026`.
 - `hyphens: auto` with `text-align: justify` gives even lines; Chromium hyphenates German because the document language follows the locale.
 - The serif face loads from Google Fonts in `head.html`; nothing has to be installed anywhere.

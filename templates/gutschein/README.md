@@ -14,7 +14,7 @@ A voucher in the DIN long format, styled with Tailwind classes that are compiled
 - The page is `210mm` × `99mm` (DIN long) with zero margins, so the gradient runs to the edge.
 - `voucher.issued | dateAdd: 3, "years" | date: "dd.MM.yyyy"` prints the expiry date `18.09.2029`.
 - `{% if voucher.message %}` leaves the message line out when there is none, and `default: "Sie"` addresses a voucher without a recipient.
-- `output: "png"` renders the same template as an image for the mail; without it the answer is the PDF for printing.
+- `output: "png"` with `settings.image.clipSelector: "main"` renders the same template as an image of just the voucher for the mail; `output` alone would take a 1200 × 630 window with the voucher in its corner. Without either the answer is the PDF for printing.
 
 ## Files
 

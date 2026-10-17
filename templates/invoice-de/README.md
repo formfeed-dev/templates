@@ -1,6 +1,6 @@
 # German invoice with GiroCode
 
-Line items, net, VAT and gross computed in the template, dates in German format with a due date 14 days out, a SEPA QR code banking apps scan, and a running footer with page numbers. Your code sends the facts; the template owns the legal layout.
+Line items, net, VAT and gross computed in the template, dates in German format with a due date 14 days out, a SEPA QR code banking apps scan, and a running footer with page numbers. Your code sends the facts; the template owns the layout.
 
 ![German invoice with GiroCode, as rendered](preview.webp)
 
@@ -10,11 +10,11 @@ Line items, net, VAT and gross computed in the template, dates in German format 
 
 ## What this shows
 
-- The request carries no derived numbers: `sum('total')` adds the lines, and VAT and gross follow from `invoice.vat_rate` inside the template.
+- The request carries no sums and no tax: `sum('total')` adds the lines, and VAT and gross follow from `invoice.vat_rate` inside the template.
 - `epcQr` draws the GiroCode (EPC QR code) from name, IBAN, BIC, amount and the payment reference as free text, so a banking app fills in the transfer from a scan. For a single one, the [GiroCode generator](https://formfeed.dev/tools/girocode?utm_source=github-templates&utm_content=invoice-de) makes the same code in your browser.
 - `dateAdd(14, 'days')` sets the due date; with the locale `de-DE`, `date('dd.MM.yyyy')` and `money` print `24.09.2026` and `3.760,40 €`.
 - The footer is a Chromium footer template with `pageNumber` and `totalPages`: “Seite 1 von 1” stays correct when the lines run over several pages.
-- `filename` is a template as well, so the download is called `rechnung-2026-0042.pdf`.
+- `filename` names the download `rechnung-2026-0042.pdf`. It is taken as written: a template expression in it is not filled in, its braces become `_`. A program that renders many invoices builds the name from each number itself.
 
 ## Files
 

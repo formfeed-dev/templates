@@ -15,6 +15,7 @@ A four-page report: a cover with a linked table of contents, KPI cards, a line c
 - One line chart compares two years from the same rows: `pluck('previous')` and `pluck('revenue')` become two series, and `devicePixelRatio: 3` in the Chart.js options keeps it sharp when the PDF is zoomed.
 - In the appendix each region is its own `tbody` with `break-inside: avoid`, so a region never splits across pages and the column headings repeat. The [page-break measurements](https://formfeed.dev/blog/page-breaks-in-tables?utm_source=github-templates&utm_content=annual-report) show why that works.
 - The footer prints the document title from `pdf.metadata.title` through Chromium’s `title` class, beside the page number.
+- `access: "public"` in the request returns a plain CDN link to put on a website, which works for as long as the file is kept: the retention of your plan decides how long that is.
 
 ## Files
 

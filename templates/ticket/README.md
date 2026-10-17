@@ -13,7 +13,7 @@ A print-at-home ticket on its own paper size, 210 × 80 mm without margins: a QR
 - The paper is `210mm` × `80mm` with zero margins, so the PDF is the ticket and nothing around it.
 - `barcode(ticket.id, { type: 'pdf417', height: 8 })` and `qrcode(ticket.check_in_url, { size: 120 })` encode the same ticket for two kinds of scanner.
 - `date('EEEE, d. MMMM yyyy')` and `date('HH:mm')` turn two ISO timestamps into `Donnerstag, 12. November 2026`, doors `08:30` and start `09:30`, in the template’s time zone `Europe/Berlin`.
-- The stub is a flex column with a dashed border: plain CSS, no image of a ticket.
+- The stub is a 52 mm column beside the ticket, set off by a dashed line: plain CSS, no image of a ticket.
 - Render it right after the purchase and attach the download to the confirmation mail.
 
 ## Files

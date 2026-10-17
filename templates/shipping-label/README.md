@@ -14,7 +14,7 @@ A custom paper size for thermal printers, a Code 128 tracking barcode, a QR code
 - `barcode(shipment.tracking, { type: 'code128', height: 18 })` draws the tracking code; the same helper does EAN-13, ITF-14, DataMatrix and PDF417.
 - The QR code is built in the template: `~` joins the tracking URL and the number before `qrcode` encodes it.
 - `sum('qty')` counts the items, so the label says “3 items” without the caller adding anything up.
-- The PDF goes straight to the printer: no browser and no print dialogue in between.
+- The PDF is exactly one label in size, so your print service can send it to the label printer as it is: no browser and no print dialogue in between.
 
 ## Files
 

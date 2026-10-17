@@ -14,7 +14,7 @@ What is commonly called a “Gutschrift”: a correction that refers to the orig
 - `sum('total') | multiply(-1)` is the net correction of `-480,00 €`; VAT follows from it, which gives `-571,20 €`.
 - The document names the original invoice by number and date, which is what makes it a correction of that invoice.
 - The closing sentence prints the amount positive again, `571,20 €`, and takes the settlement wording from the data.
-- It shares the letter layout and the legal footer with the quote and the reminder: one `style.css`, several templates.
+- Letter layout and legal footer are the ones of the quote and the reminder: the same letter rules in `style.css` and the same footer, copied into each template’s folder.
 
 ## Files
 

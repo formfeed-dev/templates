@@ -13,7 +13,7 @@ A landscape certificate with a verification QR code, rendered one at a time as P
 - A4 landscape with zero margins: the frame is plain CSS on a box exactly as tall as the page (`210mm`), so it prints to the edge.
 - `{{qrcode verify_url size=96}}` turns the verification link into a QR code; `{{upper id}}` prints the certificate number as `CERT-8841`.
 - `head.html` loads Inter and Playfair Display from Google Fonts; the render-worker fetches them once and serves them from its cache afterwards.
-- `output: "png"` renders the same template as an image for sharing; without it the answer is the PDF.
+- `output: "png"` renders the same template as an image for sharing, and `settings.image` gives the image the page’s size, `1123` × `794` pixels: an image is otherwise taken from a window of 1200 × 630, which would cut off the signature and the QR code. Without `output` the answer is the PDF shown here.
 - A whole course goes through `renders.batch` with `zip: true`: one job, one archive at the end.
 
 ## Files

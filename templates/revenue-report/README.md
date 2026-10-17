@@ -13,8 +13,8 @@ A cover page, a page break and a Chart.js bar chart built from the data inside t
 - The cover is a box 235 mm high, and `pageBreak()` starts the figures on a new page.
 - `chart` takes a Chart.js configuration written in the template; `pluck('month')` and `pluck('revenue')` pull labels and values out of the rows.
 - Charts render without animation, so the PDF shows the same chart as the editor preview.
-- Derived figures stay in the template: the average order is `m.revenue / m.orders` per row, and the footer sums orders and revenue.
-- `mode: "async"` answers at once with a queued render; `webhook_url` receives `render.completed` with the download URL when it is done.
+- Derived figures stay in the template: the average order is `m.revenue / m.orders` per row, and the table’s `tfoot` row sums orders and revenue.
+- `mode: "async"` answers at once with a queued render; `webhook_url` receives `render.completed` with the download URL when it is done. Send `webhook_secret` as well and that delivery is signed.
 
 ## Files
 
