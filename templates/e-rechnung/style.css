@@ -25,7 +25,7 @@ table.lines { width: 100%; margin-top: 6mm; border-collapse: collapse; }
 .lines td { padding: 2.3mm 1.5mm; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
 .lines tr { break-inside: avoid; }
 .num { text-align: right !important; white-space: nowrap; }
-.totals { width: 78mm; margin: 5mm 0 0 auto; border-collapse: collapse; }
+.totals { width: 78mm; margin: 5mm 0 0 auto; border-collapse: collapse; break-inside: avoid; }
 .totals td { padding: 1.2mm 1.5mm; }
 .totals .grand td { border-top: 1.5px solid #1e293b; font-weight: 700; font-size: 11pt; }
 .muted { color: #64748b; }

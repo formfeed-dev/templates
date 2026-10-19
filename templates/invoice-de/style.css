@@ -22,7 +22,7 @@ table { width: 100%; border-collapse: collapse; }
 }
 .lines td { padding: 2.5mm 1.5mm; border-bottom: 1px solid #e2e8f0; }
 .num { text-align: right !important; white-space: nowrap; }
-.totals { width: 72mm; margin: 5mm 0 0 auto; }
+.totals { width: 72mm; margin: 5mm 0 0 auto; break-inside: avoid; }
 .totals td { padding: 1.3mm 1.5mm; }
 .totals .grand td { border-top: 1.5px solid #1e293b; font-weight: 700; font-size: 11pt; }
 .pay { display: flex; align-items: center; gap: 4mm; margin: 14mm 0 0; }
