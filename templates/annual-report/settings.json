@@ -18,7 +18,8 @@
       "author": "Fennlor Studio Ltd"
     },
     "tagged": true,
-    "outline": true
+    "outline": true,
+    "pdfa": "2b"
   },
   "locale": "en-GB",
   "timezone": "Europe/London",
