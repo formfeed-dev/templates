@@ -6,6 +6,7 @@ shipping labels. Each is plain HTML and CSS with Jinja2, Liquid or Handlebars ta
 sample data it was designed with and the PDF or image it renders to.
 
 31 templates and 20 building blocks. Every template renders on
+
 [Formfeed](https://formfeed.dev/?utm_source=github-templates), where each has its own page with the
 API call in eight languages.
 
@@ -30,8 +31,9 @@ enough. Or take the files:
    ```
 
    Then change it in the editor, whose preview paginates like the PDF, and render it from your
-   code: the [API](https://docs.formfeed.dev/api/overview), the SDKs for TypeScript and Python, or
-   Zapier, Make and n8n.
+   code: the [API](https://docs.formfeed.dev/api/overview), the SDKs for TypeScript, Python and
+   PHP, or Zapier, Make and n8n.
+
 3. **Check it offline.** `npx formfeed validate` compiles every template with its own sample data
    and reports unknown variables and filters. No account needed.
 
