@@ -31,8 +31,8 @@ enough. Or take the files:
    ```
 
    Then change it in the editor, whose preview paginates like the PDF, and render it from your
-   code: the [API](https://docs.formfeed.dev/api/overview), the SDKs for TypeScript, Python and
-   PHP, or Zapier, Make and n8n.
+   code: the [API](https://docs.formfeed.dev/api/overview), the SDKs for TypeScript, Python, PHP
+   and Go, or Zapier, Make and n8n.
 
 3. **Check it offline.** `npx formfeed validate` compiles every template with its own sample data
    and reports unknown variables and filters. No account needed.
